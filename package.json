@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "clean:assets": "rm -rf assets/*",
+    "watch:fractal": "fractal start --sync",
+    "watch:css": "postcss ./src/css/index.css -o assets/index.css -w",
+    "__watch:js": "esbuild --bundle --watch --sourcemap src/js/*.js --outdir=assets/js",
+    "watch": "NODE_ENV=development run-p watch:*",
+    "build:css": "postcss ./src/css/index.css -o assets/index.css",
+    "__build:js": "esbuild --bundle --target=es6 --minify src/js/*.js --outdir=assets/js/",
+    "build:assets": "NODE_ENV=production run-p build:css",
+    "build": "NODE_ENV=production run-p build:*",
+    "start": "run-s clean:assets watch",
+    "prod": "run-s clean:* && run-s build"
+  },
+  "dependencies": {
+    "@frctl/fractal": "^1.5.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "esbuild": "^0.12.5",
+    "npm-run-all": "^4.1.5",
+    "pixrem": "^5.0.0",
+    "postcss": "^8.3.0",
+    "postcss-calc": "^8.0.0",
+    "postcss-cli": "^8.3.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-color-rgba-fallback": "^4.0.0",
+    "postcss-copy": "^7.1.0",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-import": "^14.0.2",
+  }
+}
