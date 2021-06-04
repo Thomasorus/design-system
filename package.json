@@ -27,6 +27,6 @@
     "postcss-color-rgba-fallback": "^4.0.0",
     "postcss-copy": "^7.1.0",
     "postcss-custom-properties": "^11.0.0",
-    "postcss-import": "^14.0.2",
+    "postcss-import": "^14.0.2"
   }
 }
