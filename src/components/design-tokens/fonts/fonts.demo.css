@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Editorial New Regular";
+    src: url("../../../css/fonts/EditorialNew-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-family: "Editorial New Regular";
+}
