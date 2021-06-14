@@ -212,11 +212,16 @@ h1 {
 } 
 @font-face {
     font-family: "Editorial New Regular";
-    src: url("../public/assets/d58d53cb25ead483.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+    src: url("d58d53cb25ead483.woff2") format("woff2"), url("7141cbe7e115f2b1.woff") format("woff");
+    font-style: Regular;
     font-display: swap;
 } 
-h1 {
+@font-face {
+    font-family: "Editorial New Light";
+    src: url("2ef415cb3b1f3c96.woff2") format("woff2"), url("a736b09d60ae0dcb.woff") format("woff");
+    font-style: Light;
+    font-display: swap;
+} 
+h1, h2, h3, h4, h5, h6{
     font-family: "Editorial New Regular";
 }
