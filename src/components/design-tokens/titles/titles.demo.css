@@ -1,28 +1,20 @@
 :root {
-    font-size: 16px;
-    --title-scale-0: clamp(1.31rem, 1.26rem + 0.27vw, 1.50rem);
-    --title-scale-1: clamp(1.58rem, 1.45rem + 0.61vw, 2.00rem);
-    --title-scale-2: clamp(1.89rem, 1.67rem + 1.11vw, 2.67rem);
-    --title-scale-3: clamp(2.27rem, 1.90rem + 1.84vw, 3.55rem);
-    --title-scale-4: clamp(2.72rem, 2.15rem + 2.88vw, 4.74rem);
-    --title-scale-5: clamp(3.27rem, 2.39rem + 4.35vw, 6.31rem);
-}
-h6 {
-    font-size: var(--title-scale-0);
-}
-h5 {
-    font-size: var(--title-scale-1);
+    --title-scale-4: clamp(1.30rem, 1.19rem + 0.55vw, 1.69rem);
+    --title-scale-3: clamp(1.56rem, 1.37rem + 0.98vw, 2.25rem);
+    --title-scale-2: clamp(1.88rem, 1.55rem + 1.61vw, 3.00rem);
+    --title-scale-1: clamp(2.25rem, 1.75rem + 2.50vw, 4.00rem);
 }
 h4 {
-    font-size: var(--title-scale-2);
+    font-size: var(--title-scale-4);
 }
 h3 {
     font-size: var(--title-scale-3);
 }
 h2 {
-    font-size: var(--title-scale-4);
+    font-size: var(--title-scale-2);
 }
 h1 {
-    font-size: var(--title-scale-5);
-    line-height: 1.74;
+    font-size: var(--title-scale-1);
+    /* line-height: clamp(2.1, 1.5rem + 4.35vw, 3); */
+    line-height:1.15;
 }
