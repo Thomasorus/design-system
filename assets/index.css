@@ -116,7 +116,7 @@ select {
     --accent:  var(--red);
 } 
 [theme="dark"] .teal {
-     --text: var(--white);
+    --text: var(--white);
     --background: var(--black);
     --accent:  var(--teal);
 } 
