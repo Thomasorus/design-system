@@ -165,50 +165,36 @@ select {
     color: var(--text);
 } 
 :root {
-    font-size: 16px;
-    --title-scale-0: clamp(20.96px, 20.16px + 0.27vw, 24px);
-    --title-scale-0: clamp(1.31rem, 1.26rem + 0.27vw, 1.50rem);
-    --title-scale-1: clamp(25.28px, 23.2px + 0.61vw, 32px);
-    --title-scale-1: clamp(1.58rem, 1.45rem + 0.61vw, 2.00rem);
-    --title-scale-2: clamp(30.24px, 26.72px + 1.11vw, 42.72px);
-    --title-scale-2: clamp(1.89rem, 1.67rem + 1.11vw, 2.67rem);
-    --title-scale-3: clamp(36.32px, 30.4px + 1.84vw, 56.8px);
-    --title-scale-3: clamp(2.27rem, 1.90rem + 1.84vw, 3.55rem);
-    --title-scale-4: clamp(43.52px, 34.4px + 2.88vw, 75.84px);
-    --title-scale-4: clamp(2.72rem, 2.15rem + 2.88vw, 4.74rem);
-    --title-scale-5: clamp(52.32px, 38.24px + 4.35vw, 100.96px);
-    --title-scale-5: clamp(3.27rem, 2.39rem + 4.35vw, 6.31rem);
-} 
-h6 {
-    font-size: clamp(20.96px, 20.16px + 0.27vw, 24px);
-    font-size: clamp(1.31rem, 1.26rem + 0.27vw, 1.50rem);
-    font-size: var(--title-scale-0);
-} 
-h5 {
-    font-size: clamp(25.28px, 23.2px + 0.61vw, 32px);
-    font-size: clamp(1.58rem, 1.45rem + 0.61vw, 2.00rem);
-    font-size: var(--title-scale-1);
+    --title-scale-4: clamp(20.8px, 19.04px + 0.55vw, 27.04px);
+    --title-scale-4: clamp(1.30rem, 1.19rem + 0.55vw, 1.69rem);
+    --title-scale-3: clamp(24.96px, 21.92px + 0.98vw, 36px);
+    --title-scale-3: clamp(1.56rem, 1.37rem + 0.98vw, 2.25rem);
+    --title-scale-2: clamp(30.08px, 24.8px + 1.61vw, 48px);
+    --title-scale-2: clamp(1.88rem, 1.55rem + 1.61vw, 3.00rem);
+    --title-scale-1: clamp(36px, 28px + 2.50vw, 64px);
+    --title-scale-1: clamp(2.25rem, 1.75rem + 2.50vw, 4.00rem);
 } 
 h4 {
-    font-size: clamp(30.24px, 26.72px + 1.11vw, 42.72px);
-    font-size: clamp(1.89rem, 1.67rem + 1.11vw, 2.67rem);
-    font-size: var(--title-scale-2);
+    font-size: clamp(20.8px, 19.04px + 0.55vw, 27.04px);
+    font-size: clamp(1.30rem, 1.19rem + 0.55vw, 1.69rem);
+    font-size: var(--title-scale-4);
 } 
 h3 {
-    font-size: clamp(36.32px, 30.4px + 1.84vw, 56.8px);
-    font-size: clamp(2.27rem, 1.90rem + 1.84vw, 3.55rem);
+    font-size: clamp(24.96px, 21.92px + 0.98vw, 36px);
+    font-size: clamp(1.56rem, 1.37rem + 0.98vw, 2.25rem);
     font-size: var(--title-scale-3);
 } 
 h2 {
-    font-size: clamp(43.52px, 34.4px + 2.88vw, 75.84px);
-    font-size: clamp(2.72rem, 2.15rem + 2.88vw, 4.74rem);
-    font-size: var(--title-scale-4);
+    font-size: clamp(30.08px, 24.8px + 1.61vw, 48px);
+    font-size: clamp(1.88rem, 1.55rem + 1.61vw, 3.00rem);
+    font-size: var(--title-scale-2);
 } 
 h1 {
-    font-size: clamp(52.32px, 38.24px + 4.35vw, 100.96px);
-    font-size: clamp(3.27rem, 2.39rem + 4.35vw, 6.31rem);
-    font-size: var(--title-scale-5);
-    line-height: 1.74;
+    font-size: clamp(36px, 28px + 2.50vw, 64px);
+    font-size: clamp(2.25rem, 1.75rem + 2.50vw, 4.00rem);
+    font-size: var(--title-scale-1);
+    /* line-height: clamp(2.1, 1.5rem + 4.35vw, 3); */
+    line-height:1.15;
 } 
 @font-face {
     font-family: "Editorial New Regular";
