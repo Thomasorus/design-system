@@ -1,4 +1,5 @@
 ---
-title: Thomasorus components
+title: Thomasorus Design System
 ---
-This is the component library for FooCorp. **Feel free to look around!**
+
+This library of components composes [Thomasorus](https://thomasorus.com)'s design system.
