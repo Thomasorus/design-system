@@ -1,11 +1,17 @@
 @font-face {
     font-family: "Editorial New Regular";
-    src: url("../../../css/fonts/EditorialNew-Regular.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
+    src: url("../../../css/fonts/EditorialNew-Regular.woff2") format("woff2"), url("../../../css/fonts/EditorialNew-Regular.woff") format("woff");
+    font-style: Regular;
     font-display: swap;
 }
 
-h1 {
+@font-face {
+    font-family: "Editorial New Light";
+    src: url("../../../css/fonts/EditorialNew-Light.woff2") format("woff2"), url("../../../css/fonts/EditorialNew-Light.woff") format("woff");
+    font-style: Light;
+    font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6{
     font-family: "Editorial New Regular";
 }
