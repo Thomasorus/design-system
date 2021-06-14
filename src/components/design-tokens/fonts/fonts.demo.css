@@ -1,17 +1,45 @@
 @font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url("../../../css/fonts/Inter-roman.var.woff2?v=3.18") format("woff2");
+  }
+  @font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
+    font-named-instance: 'Italic';
+    src: url("../../../css/fonts/Inter-italic.var.woff2?v=3.18") format("woff2");
+  }
+
+@font-face {
     font-family: "Editorial New Regular";
-    src: url("../../../css/fonts/EditorialNew-Regular.woff2") format("woff2"), url("../../../css/fonts/EditorialNew-Regular.woff") format("woff");
+    src: url("../../../css/fonts/EditorialNew-Regular.woff2") format("woff2");
     font-style: Regular;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Editorial New Light";
-    src: url("../../../css/fonts/EditorialNew-Light.woff2") format("woff2"), url("../../../css/fonts/EditorialNew-Light.woff") format("woff");
+    src: url("../../../css/fonts/EditorialNew-Light.woff2") format("woff2");
     font-style: Light;
     font-display: swap;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: "Editorial New Regular";
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../../../css/fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-style: Light;
+  font-display: swap;
+}
+
+
+
+html { font-family: 'Inter', sans-serif; }
+  @supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
 }
