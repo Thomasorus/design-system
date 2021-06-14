@@ -1,5 +1,6 @@
 
 /* Design tokens */
-
 @import "../components/design-tokens/colors/colors.demo.css";
 @import "../components/design-tokens/themes/themes.demo.css";
+@import "../components/design-tokens/titles/titles.demo.css";
+@import "../components/design-tokens/fonts/fonts.demo.css";
