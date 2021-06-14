@@ -242,7 +242,7 @@ h1 {
     line-height:var(--title-line-height-1);
 } 
 h1, h2, h3, h4, h5, h6{
-    font-family: "Editorial New Regular";
+    font-family: "Editorial New Regular", serif;
 } 
 @font-face {
     font-family: 'Inter var';
