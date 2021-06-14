@@ -1,20 +1,40 @@
 :root {
+    --title-scale-6: clamp(0.90rem, 0.79rem + 0.58vw, 1.31rem);
+    --title-scale-5: clamp(1.09rem, 0.93rem + 0.79vw, 1.64rem);
     --title-scale-4: clamp(1.30rem, 1.19rem + 0.55vw, 1.69rem);
     --title-scale-3: clamp(1.56rem, 1.37rem + 0.98vw, 2.25rem);
     --title-scale-2: clamp(1.88rem, 1.55rem + 1.61vw, 3.00rem);
     --title-scale-1: clamp(2.25rem, 1.75rem + 2.50vw, 4.00rem);
+
+    --title-line-height-6: clamp(1.16rem, 1.05rem + 0.51vw, 1.52rem);
+    --title-line-height-5: clamp(1.39rem, 1.24rem + 0.73vw, 1.89rem);
+    --title-line-height-4: clamp(1.66rem, 1.46rem + 1.01vw, 2.37rem);
+    --title-line-height-3: clamp(2.00rem, 1.72rem + 1.38vw, 2.96rem);
+    --title-line-height-2: clamp(2.40rem, 2.02rem + 1.86vw, 3.70rem);
+    --title-line-height-1: clamp(2.88rem, 2.38rem + 2.50vw, 4.63rem);
+}
+
+h6 {
+    font-size: var(--title-scale-6);
+    line-height:var(--title-line-height-6);
+}
+h5 {
+    font-size: var(--title-scale-5);
+    line-height:var(--title-line-height-5);
 }
 h4 {
     font-size: var(--title-scale-4);
+    line-height:var(--title-line-height-4);
 }
 h3 {
     font-size: var(--title-scale-3);
+    line-height:var(--title-line-height-3);
 }
 h2 {
     font-size: var(--title-scale-2);
+    line-height:var(--title-line-height-2);
 }
 h1 {
     font-size: var(--title-scale-1);
-    /* line-height: clamp(2.1, 1.5rem + 4.35vw, 3); */
-    line-height:1.15;
+    line-height:var(--title-line-height-1);
 }
