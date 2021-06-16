@@ -6,9 +6,9 @@
 
 
 [theme="light"] .portfolio {
-    --text: var(--red);
+    --text: var(--black);
     --background: var(--white);
-    --accent:  var(--black);
+    --accent:  var(--red);
 }
 [theme="light"] .projects {
     --text: var(--black);
@@ -21,12 +21,12 @@
     --accent:  var(--yellow);
 }
 [theme="light"] .knowledge {
-    --text: var(--blue);
+    --text: var(--black);
     --background: var(--white);
-    --accent:  var(--black);
+    --accent:  var(--blue);
 }
 [theme="light"] .about {
-    --text: var(--purple);
+    --text: var(--black);
     --background: var(--white);
     --accent:  var(--pink);
 }
