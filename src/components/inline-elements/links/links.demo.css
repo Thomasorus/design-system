@@ -1,0 +1,13 @@
+a {
+    color:var(--text);
+}
+
+a[target="_blank"] {
+    color: var(--text);
+    position: relative;
+}
+
+a[target="_blank"]:after {
+    content: "\2197";
+    color:var(--text);
+}
