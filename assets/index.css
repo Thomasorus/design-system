@@ -86,9 +86,9 @@ select {
     --accent:  var(--black);
 } 
 [theme="light"] .portfolio {
-    --text: var(--red);
+    --text: var(--black);
     --background: var(--white);
-    --accent:  var(--black);
+    --accent:  var(--red);
 } 
 [theme="light"] .projects {
     --text: var(--black);
@@ -101,12 +101,12 @@ select {
     --accent:  var(--yellow);
 } 
 [theme="light"] .knowledge {
-    --text: var(--blue);
+    --text: var(--black);
     --background: var(--white);
-    --accent:  var(--black);
+    --accent:  var(--blue);
 } 
 [theme="light"] .about {
-    --text: var(--purple);
+    --text: var(--black);
     --background: var(--white);
     --accent:  var(--pink);
 } 
@@ -286,6 +286,15 @@ a {
     color:hsla(0, 0%, 7%, 1);
     color:var(--text);
 } 
+a:hover {
+    
+} 
+a:active {
+
+} 
+a:visited {
+    
+} 
 a[target="_blank"] {
     color: hsla(0, 0%, 7%, 1);
     color: var(--text);
@@ -293,6 +302,11 @@ a[target="_blank"] {
 } 
 a[target="_blank"]:after {
     content: "\2197";
+    color:hsla(0, 0%, 7%, 1);
+    color:var(--text);
+} 
+code {
+    font-family: "IBM Plex Mono", monospace;
     color:hsla(0, 0%, 7%, 1);
     color:var(--text);
 }
