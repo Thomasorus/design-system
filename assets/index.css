@@ -205,6 +205,10 @@ html { font-family: 'Inter', sans-serif; }
     html { font-family: 'Inter var', sans-serif; }
 } 
 :root {
+    --radius-sm: 5px;
+    --radius-md: 10px;
+} 
+:root {
     --title-scale-6: clamp(14.4px, 12.64px + 0.58vw, 20.96px);
     --title-scale-6: clamp(0.90rem, 0.79rem + 0.58vw, 1.31rem);
     --title-scale-5: clamp(17.44px, 14.88px + 0.79vw, 26.24px);
@@ -309,4 +313,31 @@ code {
     font-family: "IBM Plex Mono", monospace;
     color:hsla(0, 0%, 7%, 1);
     color:var(--text);
+} 
+pre {
+    background-color:hsla(0, 0%, 7%, 1);
+    background-color:var(--accent);
+    overflow-x: auto;
+    border-radius: 5px;
+    border-radius: var(--radius-sm);
+    scrollbar-color: hsla(0, 0%, 100%, 1) hsla(0, 0%, 7%, 1);
+    scrollbar-color: var(--background) var(--accent);
+} 
+/* Override of the normal text and accent color to ensure a consistent black background in color mode */ 
+[theme="color"] pre {
+    --text: var(--white);
+    --accent: var(--black);
+} 
+/* Overrides for accessibility reasons */ 
+[theme="light"] .knowledge pre *, 
+[theme="light"] .portfolio pre * {
+    --text: var(--white);
+} 
+[theme="dark"] .journal pre *, 
+[theme="dark"] .projects pre * {
+    --text: var(--black);
+} 
+* {
+    scrollbar-color: hsla(0, 0%, 100%, 1) hsla(0, 0%, 7%, 1);
+    scrollbar-color: var(--background) var(--text);
 }
