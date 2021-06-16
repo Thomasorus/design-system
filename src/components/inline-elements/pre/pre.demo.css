@@ -1,6 +1,8 @@
 pre {
     background-color:var(--accent);
-    overflow-x: scroll;
+    overflow-x: auto;
+    border-radius: var(--radius-sm);
+    scrollbar-color: var(--background) var(--accent);
 }
 
 /* Override of the normal text and accent color to ensure a consistent black background in color mode */
