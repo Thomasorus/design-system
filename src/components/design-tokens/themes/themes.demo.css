@@ -5,90 +5,90 @@
 }
 
 
-[theme="light"] .red {
+[theme="light"] .portfolio {
     --text: var(--red);
     --background: var(--white);
     --accent:  var(--black);
 }
-[theme="light"] .teal {
+[theme="light"] .projects {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--teal);
 }
-[theme="light"] .yellow {
+[theme="light"] .journal {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--yellow);
 }
-[theme="light"] .blue {
+[theme="light"] .knowledge {
     --text: var(--blue);
     --background: var(--white);
     --accent:  var(--black);
 }
-[theme="light"] .purple {
+[theme="light"] .about {
     --text: var(--purple);
     --background: var(--white);
     --accent:  var(--pink);
 }
 
-[theme="dark"] .red {
+[theme="dark"] .portfolio {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--red);
 }
-[theme="dark"] .teal {
+[theme="dark"] .projects {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--teal);
 }
-[theme="dark"] .yellow {
+[theme="dark"] .journal {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--yellow);
 }
-[theme="dark"] .blue {
+[theme="dark"] .knowledge {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--blue);
 }
-[theme="dark"] .purple {
+[theme="dark"] .about {
     --text: var(--pink);
     --background: var(--black);
     --accent:  var(--purple);
 }
 
-[theme="color"] .red {
+[theme="color"] .portfolio {
     --text: var(--white);
     --background: var(--red);
     --accent:  var(--black);
 }
 
-[theme="color"] .teal {
+[theme="color"] .projects {
     --text: var(--black);
     --background: var(--teal);
     --accent:  var(--white);
 }
 
-[theme="color"] .yellow {
+[theme="color"] .journal {
     --text: var(--black);
     --background: var(--yellow);
     --accent:  var(--white);
 }
 
-[theme="color"] .blue {
+[theme="color"] .knowledge {
     --text: var(--white);
     --background: var(--blue);
     --accent:  var(--black);
 }
 
-[theme="color"] .purple {
+[theme="color"] .about {
     --text: var(--pink);
     --background: var(--purple);
     --accent:  var(--white);
 }
 
 
-.red, .teal, .yellow, .blue, .purple {
+.portfolio, .projects, .journal, .knowledge, .about {
     background-color: var(--background);
     color: var(--text);
 }
