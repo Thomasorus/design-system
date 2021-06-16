@@ -1,0 +1,21 @@
+pre {
+    background-color:var(--accent);
+    overflow-x: scroll;
+}
+
+/* Override of the normal text and accent color to ensure a consistent black background in color mode */
+[theme="color"] pre {
+    --text: var(--white);
+    --accent: var(--black);
+}
+
+/* Overrides for accessibility reasons */
+[theme="light"] .knowledge pre *, 
+[theme="light"] .portfolio pre * {
+    --text: var(--white);
+}
+[theme="dark"] .journal pre *, 
+[theme="dark"] .projects pre * {
+    --text: var(--black);
+}
+
