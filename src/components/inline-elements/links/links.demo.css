@@ -2,6 +2,18 @@ a {
     color:var(--text);
 }
 
+a:hover {
+    
+}
+
+a:active {
+
+}
+
+a:visited {
+    
+}
+
 a[target="_blank"] {
     color: var(--text);
     position: relative;
