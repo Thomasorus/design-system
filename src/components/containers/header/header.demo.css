@@ -1,0 +1,9 @@
+header {
+    width: 100%;
+    background:var(--background);
+    padding:62px;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:20px;
+}
