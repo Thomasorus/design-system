@@ -1,0 +1,13 @@
+.logo {
+    position:relative;
+    display:flex;
+}
+
+.logo svg {
+    transform:translateY(-50%);
+}
+
+.logo strong {
+    font-size: 20px;
+    text-transform: uppercase;
+}
