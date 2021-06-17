@@ -208,6 +208,17 @@ html { font-family: 'Inter', sans-serif; }
     --radius-sm: 5px;
     --radius-md: 10px;
 } 
+.logo {
+    position:relative;
+    display:flex;
+} 
+.logo svg {
+    transform:translateY(-50%);
+} 
+.logo strong {
+    font-size: 20px;
+    text-transform: uppercase;
+} 
 :root {
     --title-scale-6: clamp(14.4px, 12.64px + 0.58vw, 20.96px);
     --title-scale-6: clamp(0.90rem, 0.79rem + 0.58vw, 1.31rem);
@@ -322,6 +333,7 @@ pre {
     border-radius: var(--radius-sm);
     scrollbar-color: hsla(0, 0%, 100%, 1) hsla(0, 0%, 7%, 1);
     scrollbar-color: var(--background) var(--accent);
+    padding:10px;
 } 
 /* Override of the normal text and accent color to ensure a consistent black background in color mode */ 
 [theme="color"] pre {
@@ -336,6 +348,39 @@ pre {
 [theme="dark"] .journal pre *, 
 [theme="dark"] .projects pre * {
     --text: var(--black);
+} 
+ul {
+    list-style-type: disc;
+} 
+ul[role="list"] {
+    padding:0;
+    margin:0;
+} 
+header {
+    width: 100%;
+    background:hsla(0, 0%, 100%, 1);
+    background:var(--background);
+    padding:62px;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:20px;
+} 
+.nav--main ul {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:flex-end;
+    gap: 5px 20px;
+} 
+.nav--main a {
+    text-decoration:none;
+    font-size: 18px;
+} 
+.nav--secondary ul {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    gap: 5px 20px;
 } 
 * {
     scrollbar-color: hsla(0, 0%, 100%, 1) hsla(0, 0%, 7%, 1);
