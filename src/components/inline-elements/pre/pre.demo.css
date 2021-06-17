@@ -3,6 +3,7 @@ pre {
     overflow-x: auto;
     border-radius: var(--radius-sm);
     scrollbar-color: var(--background) var(--accent);
+    padding:10px;
 }
 
 /* Override of the normal text and accent color to ensure a consistent black background in color mode */
