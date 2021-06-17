@@ -1,0 +1,11 @@
+.nav--main ul {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:flex-end;
+    gap: 5px 20px;
+}
+
+.nav--main a {
+    text-decoration:none;
+    font-size: 18px;
+}
