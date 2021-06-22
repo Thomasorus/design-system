@@ -1,0 +1,29 @@
+:root {
+    /* GLOBAL SCALES */
+    --fluid-min-width: 320;
+    --fluid-max-width: 1440;
+  
+    /* FLUID SCALES */
+    --fluid-screen: 100vw;
+    --fluid-bp: calc((var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)));
+
+
+    /* Main Magin for containers */
+    --margin-s-min: (var(--f-0-min, 20)); 
+    --margin-s-max: (var(--f-0-max, 64));
+    --margin-s: calc(((var(--margin-s-min) / 16) * 1rem) + (var(--margin-s-max) - var(--margin-s-min)) * var(--fluid-bp));
+  
+    /* Vertical paragraph margin */
+    --paragraph-s-min: (var(--f-0-min, 25)); 
+    --paragraph-s-max: (var(--f-0-max, 30));
+    --paragraph-s: calc(((var(--paragraph-s-min) / 16) * 1rem) + (var(--paragraph-s-max) - var(--paragraph-s-min)) * var(--fluid-bp));
+
+    /* TODO : see if possible to merge all margins scales into one */
+    
+  }
+  
+  @media screen and (min-width: 1440px) {
+    :root {
+      --fluid-screen: calc(var(--fluid-max-width) * 1px);
+    }
+  }
