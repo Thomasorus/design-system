@@ -81,6 +81,34 @@ select {
     --red: hsla(13, 100%, 43%, 1);
 } 
 :root {
+    /* GLOBAL SCALES */
+    --fluid-min-width: 320;
+    --fluid-max-width: 1440;
+  
+    /* FLUID SCALES */
+    --fluid-screen: 100vw;
+    --fluid-bp: calc((var(--fluid-screen) - var(--fluid-min-width)/16*1rem)/(var(--fluid-max-width) - var(--fluid-min-width)));
+
+
+    /* Main Magin for containers */
+    --margin-s-min: (var(--f-0-min, 20)); 
+    --margin-s-max: (var(--f-0-max, 64));
+    --margin-s: calc(var(--margin-s-min)/16*1rem + (var(--margin-s-max) - var(--margin-s-min))*var(--fluid-bp));
+  
+    /* Vertical paragraph margin */
+    --paragraph-s-min: (var(--f-0-min, 25)); 
+    --paragraph-s-max: (var(--f-0-max, 30));
+    --paragraph-s: calc(var(--paragraph-s-min)/16*1rem + (var(--paragraph-s-max) - var(--paragraph-s-min))*var(--fluid-bp));
+
+    /* TODO : see if possible to merge all margins scales into one */
+    
+  } 
+@media screen and (min-width: 1440px) {
+    :root {
+      --fluid-screen: calc(var(--fluid-max-width)*1px);
+    }
+  } 
+:root {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--black);
@@ -219,6 +247,41 @@ html { font-family: 'Inter', sans-serif; }
     font-size: 20px;
     text-transform: uppercase;
 } 
+* {
+    scrollbar-color: hsla(0, 0%, 100%, 1) hsla(0, 0%, 7%, 1);
+    scrollbar-color: var(--background) var(--text);
+} 
+* {
+    max-width: 60ch;
+} 
+html,
+body,
+div,
+header,
+nav,
+main,
+article,
+footer {
+max-width: none;
+} 
+figure,
+figcaption,
+img {
+    max-width: 100%;
+} 
+main {
+margin: calc(var(--f-0-min, 20)/16*1rem + (var(--f-0-max, 64) - var(--f-0-min, 20))*(0.08929vw - 0.01786rem));
+margin: var(--margin-s);
+} 
+nav[role="breadcrumb"] {
+    position: sticky;
+    top:0;
+    margin: 0 calc(var(--f-0-min, 20)/16*1rem + (var(--f-0-max, 64) - var(--f-0-min, 20))*(0.08929vw - 0.01786rem));
+    margin: 0 var(--margin-s);
+    background-color: hsla(0, 0%, 100%, 1);
+    background-color: var(--background);
+    z-index: 1;
+} 
 :root {
     --title-scale-6: clamp(14.4px, 12.64px + 0.58vw, 20.96px);
     --title-scale-6: clamp(0.90rem, 0.79rem + 0.58vw, 1.31rem);
@@ -245,6 +308,28 @@ html { font-family: 'Inter', sans-serif; }
     --title-line-height-2: clamp(2.40rem, 2.02rem + 1.86vw, 3.70rem);
     --title-line-height-1: clamp(46.08px, 38.08px + 2.50vw, 74.08px);
     --title-line-height-1: clamp(2.88rem, 2.38rem + 2.50vw, 4.63rem);
+
+    /* TITLES MARGINS SCALES */
+    --title-scale-5xs-min: (var(--title-scale-s-min) * 0.0625); 
+    --title-scale-5xs-max: (var(--title-scale-s-max) * 0.0625);
+    --title-scale-4xs-min: (var(--title-scale-s-min) * 0.125); 
+    --title-scale-4xs-max: (var(--title-scale-s-max) * 0.125);
+    --title-scale-3xs-min: (var(--title-scale-s-min) * 0.25); 
+    --title-scale-3xs-max: (var(--title-scale-s-max) * 0.25);
+    --title-scale-2xs-min: (var(--title-scale-s-min) * 0.5); 
+    --title-scale-2xs-max: (var(--title-scale-s-max) * 0.5);
+    --title-scale-xs-min: (var(--title-scale-s-min) * 0.75); 
+    --title-scale-xs-max: (var(--title-scale-s-max) * 0.75);
+    --title-scale-s-min: (var(--f-0-min, 70)); 
+    --title-scale-s-max: (var(--f-0-max, 100));
+  
+    /* TITLES MARGINS VARS */
+    --title-margin-6: calc(var(--title-scale-5xs-min)/16*1rem + (var(--title-scale-5xs-max) - var(--title-scale-5xs-min))*var(--fluid-bp));
+    --title-margin-5: calc(var(--title-scale-4xs-min)/16*1rem + (var(--title-scale-4xs-max) - var(--title-scale-4xs-min))*var(--fluid-bp));
+    --title-margin-4: calc(var(--title-scale-3xs-min)/16*1rem + (var(--title-scale-3xs-max) - var(--title-scale-3xs-min))*var(--fluid-bp));
+    --title-margin-3: calc(var(--title-scale-2xs-min)/16*1rem + (var(--title-scale-2xs-max) - var(--title-scale-2xs-min))*var(--fluid-bp));
+    --title-margin-2: calc(var(--title-scale-xs-min)/16*1rem + (var(--title-scale-xs-max) - var(--title-scale-xs-min))*var(--fluid-bp));
+    --title-margin-1: calc(var(--title-scale-s-min)/16*1rem + (var(--title-scale-s-max) - var(--title-scale-s-min))*var(--fluid-bp));
 } 
 h6 {
     font-size: clamp(14.4px, 12.64px + 0.58vw, 20.96px);
@@ -253,6 +338,8 @@ h6 {
     line-height:clamp(18.56px, 16.8px + 0.51vw, 24.32px);
     line-height:clamp(1.16rem, 1.05rem + 0.51vw, 1.52rem);
     line-height:var(--title-line-height-6);
+    margin:calc(var(--f-0-min, 70)*0.0625/16*1rem + (var(--f-0-max, 100)*0.0625 - var(--f-0-min, 70)*0.0625)*(0.08929vw - 0.01786rem)) 0;
+    margin:var(--title-margin-6) 0;
 } 
 h5 {
     font-size: clamp(17.44px, 14.88px + 0.79vw, 26.24px);
@@ -261,6 +348,8 @@ h5 {
     line-height:clamp(22.24px, 19.84px + 0.73vw, 30.24px);
     line-height:clamp(1.39rem, 1.24rem + 0.73vw, 1.89rem);
     line-height:var(--title-line-height-5);
+    margin:calc(var(--f-0-min, 70)*0.125/16*1rem + (var(--f-0-max, 100)*0.125 - var(--f-0-min, 70)*0.125)*(0.08929vw - 0.01786rem)) 0;
+    margin:var(--title-margin-5) 0;
 } 
 h4 {
     font-size: clamp(20.8px, 19.04px + 0.55vw, 27.04px);
@@ -269,6 +358,8 @@ h4 {
     line-height:clamp(26.56px, 23.36px + 1.01vw, 37.92px);
     line-height:clamp(1.66rem, 1.46rem + 1.01vw, 2.37rem);
     line-height:var(--title-line-height-4);
+    margin:calc(var(--f-0-min, 70)*0.25/16*1rem + (var(--f-0-max, 100)*0.25 - var(--f-0-min, 70)*0.25)*(0.08929vw - 0.01786rem)) 0;
+    margin:var(--title-margin-4) 0;
 } 
 h3 {
     font-size: clamp(24.96px, 21.92px + 0.98vw, 36px);
@@ -277,6 +368,8 @@ h3 {
     line-height:clamp(32px, 27.52px + 1.38vw, 47.36px);
     line-height:clamp(2.00rem, 1.72rem + 1.38vw, 2.96rem);
     line-height:var(--title-line-height-3);
+    margin:calc(var(--f-0-min, 70)*0.5/16*1rem + (var(--f-0-max, 100)*0.5 - var(--f-0-min, 70)*0.5)*(0.08929vw - 0.01786rem)) 0;
+    margin:var(--title-margin-3) 0;
 } 
 h2 {
     font-size: clamp(30.08px, 24.8px + 1.61vw, 48px);
@@ -285,6 +378,8 @@ h2 {
     line-height:clamp(38.4px, 32.32px + 1.86vw, 59.2px);
     line-height:clamp(2.40rem, 2.02rem + 1.86vw, 3.70rem);
     line-height:var(--title-line-height-2);
+    margin:calc(var(--f-0-min, 70)*0.75/16*1rem + (var(--f-0-max, 100)*0.75 - var(--f-0-min, 70)*0.75)*(0.08929vw - 0.01786rem)) 0!important;
+    margin:var(--title-margin-2) 0!important;
 } 
 h1 {
     font-size: clamp(36px, 28px + 2.50vw, 64px);
@@ -293,6 +388,8 @@ h1 {
     line-height:clamp(46.08px, 38.08px + 2.50vw, 74.08px);
     line-height:clamp(2.88rem, 2.38rem + 2.50vw, 4.63rem);
     line-height:var(--title-line-height-1);
+    margin:calc(var(--f-0-min, 70)/16*1rem + (var(--f-0-max, 100) - var(--f-0-min, 70))*(0.08929vw - 0.01786rem)) 0;
+    margin:var(--title-margin-1) 0;
 } 
 h1, h2, h3, h4, h5, h6{
     font-family: "Editorial New Regular", serif;
@@ -334,6 +431,7 @@ pre {
     scrollbar-color: hsla(0, 0%, 100%, 1) hsla(0, 0%, 7%, 1);
     scrollbar-color: var(--background) var(--accent);
     padding:10px;
+    max-width: 80ch;
 } 
 /* Override of the normal text and accent color to ensure a consistent black background in color mode */ 
 [theme="color"] pre {
@@ -356,15 +454,49 @@ ul[role="list"] {
     padding:0;
     margin:0;
 } 
+hr {
+    margin-left: 0;
+    color: hsla(0, 0%, 7%, 1);
+    color: var(--text);
+    border: 1px solid hsla(0, 0%, 7%, 1);
+    border: 1px solid var(--text);
+} 
 header {
     width: 100%;
     background:hsla(0, 0%, 100%, 1);
     background:var(--background);
-    padding:62px;
+    padding: calc(var(--f-0-min, 20)/16*1rem + (var(--f-0-max, 64) - var(--f-0-min, 20))*(0.08929vw - 0.01786rem));
+    padding: var(--margin-s);
     display:flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap:20px;
+    gap:calc(var(--f-0-min, 25)/16*1rem + (var(--f-0-max, 30) - var(--f-0-min, 25))*(0.08929vw - 0.01786rem));
+    gap:var(--paragraph-s);
+} 
+article > *+* {
+    margin-top: calc(var(--f-0-min, 25)/16*1rem + (var(--f-0-max, 30) - var(--f-0-min, 25))*(0.08929vw - 0.01786rem));
+    margin-top: var(--paragraph-s);
+    position: relative;
+} 
+article h1 + picture {
+    position: absolute;
+    margin:0;
+    max-width: 40%;
+    right:0;
+} 
+@media screen and (max-width: 1100px) {
+    article h1 + picture {
+        position: static;
+        margin:inherit;
+        max-width: 100%;
+        right:unset;
+    }
+    
+} 
+.nav--main {
+    position:sticky;
+    top:calc(var(--f-0-min, 20)/16*1rem + (var(--f-0-max, 64) - var(--f-0-min, 20))*(0.08929vw - 0.01786rem));
+    top:var(--margin-s);
 } 
 .nav--main ul {
     display:flex;
@@ -381,8 +513,4 @@ header {
     flex-flow: row wrap;
     justify-content:center;
     gap: 5px 20px;
-} 
-* {
-    scrollbar-color: hsla(0, 0%, 100%, 1) hsla(0, 0%, 7%, 1);
-    scrollbar-color: var(--background) var(--text);
 }
