@@ -1,3 +1,8 @@
+.nav--main {
+    position:sticky;
+    top:var(--margin-s);
+}
+
 .nav--main ul {
     display:flex;
     flex-flow: row wrap;
