@@ -1,9 +1,6 @@
 @import "reset.css";
 @import "config.css";
+@import "base.css";
 @import "inline.css";
 @import "containers.css";
 @import "navigations.css";
-
-* {
-    scrollbar-color: var(--background) var(--text);
-}

@@ -1,0 +1,38 @@
+
+* {
+    scrollbar-color: var(--background) var(--text);
+}
+
+
+* {
+    max-width: 60ch;
+}
+  
+html,
+body,
+div,
+header,
+nav,
+main,
+article,
+footer {
+max-width: none;
+}
+
+figure,
+figcaption,
+img {
+    max-width: 100%;
+}
+
+main {
+margin: var(--margin-s);
+}
+
+nav[role="breadcrumb"] {
+    position: sticky;
+    top:0;
+    margin: 0 var(--margin-s);
+    background-color: var(--background);
+    z-index: 1;
+}
