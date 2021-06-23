@@ -5,6 +5,7 @@ pre {
     scrollbar-color: var(--background) var(--accent);
     padding:10px;
     max-width: 80ch;
+    margin: var(--title-margin-3) 0!important;
 }
 
 /* Override of the normal text and accent color to ensure a consistent black background in color mode */
