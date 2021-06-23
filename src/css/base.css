@@ -29,10 +29,9 @@ main {
 margin: var(--margin-s);
 }
 
-nav[role="breadcrumb"] {
-    position: sticky;
-    top:0;
-    margin: 0 var(--margin-s);
-    background-color: var(--background);
-    z-index: 1;
+
+:root {
+    --paragraph-s-min: (var(--f-0-min, 14)); 
+    --paragraph-s-max: (var(--f-0-max, 20));
+    --paragraph-s: calc(((var(--paragraph-s-min) / 16) * 1rem) + (var(--paragraph-s-max) - var(--paragraph-s-min)) * var(--fluid-bp));
 }
