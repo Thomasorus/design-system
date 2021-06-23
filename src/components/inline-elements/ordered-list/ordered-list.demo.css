@@ -1,0 +1,8 @@
+ol {
+    font-size: var(--paragraph-s);
+}
+
+ol[role="list"] {
+    padding:0;
+    margin:0;
+}
