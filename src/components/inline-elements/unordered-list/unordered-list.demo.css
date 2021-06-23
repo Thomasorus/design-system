@@ -1,5 +1,6 @@
 ul {
     list-style-type: disc;
+    font-size: var(--paragraph-s);
 }
 
 ul[role="list"] {
