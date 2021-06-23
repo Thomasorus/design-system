@@ -40,26 +40,31 @@ h6 {
     font-size: var(--title-scale-6);
     line-height:var(--title-line-height-6);
     margin:var(--title-margin-6) 0;
+    max-width: 30ch;
 }
 h5 {
     font-size: var(--title-scale-5);
     line-height:var(--title-line-height-5);
     margin:var(--title-margin-5) 0;
+    max-width: 30ch;
 }
 h4 {
     font-size: var(--title-scale-4);
     line-height:var(--title-line-height-4);
     margin:var(--title-margin-4) 0;
+    max-width: 30ch;
 }
 h3 {
     font-size: var(--title-scale-3);
     line-height:var(--title-line-height-3);
     margin:var(--title-margin-3) 0;
+    max-width: 30ch;
 }
 h2 {
     font-size: var(--title-scale-2);
     line-height:var(--title-line-height-2);
     margin:var(--title-margin-2) 0!important;
+    max-width: 30ch;
 }
 h1 {
     font-size: var(--title-scale-1);
