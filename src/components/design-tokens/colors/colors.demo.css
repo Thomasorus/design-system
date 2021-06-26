@@ -4,7 +4,10 @@
     --white: hsla(0, 0%, 100%, 1);
 
     --light-grey: hsla(0, 0%, 93%, 1);
+    --middle-grey: hsla(0, 0%, 7%, 0.5);
     --dark-grey: hsla(0, 0%, 13%, 1);
+
+    --focus: hsla(0, 0%, 40%, 1);
 
     /* Pastel colors */
     /* --yellow: hsla(50, 95%, 68%, 1);
