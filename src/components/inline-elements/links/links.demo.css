@@ -1,25 +1,39 @@
 a {
     color:var(--text);
+    padding:5px 10px;
+    margin:-5px -10px;
+    transition: 0.25s;
 }
 
-a:hover {
-    
+article a {
+    padding:inherit;
+    margin:initial;
+}
+
+a:hover,
+a[target="_blank"]:hover,
+a[target="_blank"]:hover:after  {
+    color:var(--background);
+    background:var(--text);
+    transition: 0.25s;
+}
+
+a:focus {
+    color:var(--background);
+    background:var(--focus);
+    transition: 0.25s;
 }
 
 a:active {
-
-}
-
-a:visited {
-    
+    color:var(--background);
+    background:var(--accent);
+    transition: 0.25s;
 }
 
 a[target="_blank"] {
-    color: var(--text);
     position: relative;
 }
 
 a[target="_blank"]:after {
     content: "\2197";
-    color:var(--text);
 }
