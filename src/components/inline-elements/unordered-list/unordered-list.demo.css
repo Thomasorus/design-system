@@ -1,6 +1,28 @@
 ul {
-    list-style-type: disc;
-    font-size: var(--paragraph-s);
+    padding-left:2em;
+}
+
+ul:not([role="list"]) li {
+    padding-left: 0.75em;
+}
+
+ul li::marker{
+    font-size: var(--base-font-size);
+}
+
+[theme="color"] ul li::marker{
+    --bullet-color: var(--accent);
+    color:var(--bullet-color);
+}
+
+[theme="light"] ul li::marker{
+    --bullet-color: hsla(0, 0%, 7%, 0.5);
+    color:var(--bullet-color);
+}
+
+[theme="dark"] ul li::marker{
+    --bullet-color: hsla(0, 0%, 100%, 0.5);
+    color:var(--bullet-color);
 }
 
 ul[role="list"] {
