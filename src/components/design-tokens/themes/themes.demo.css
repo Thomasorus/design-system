@@ -31,6 +31,8 @@
     --accent:  var(--pink);
 }
 
+
+
 [theme="dark"] .portfolio {
     --text: var(--white);
     --background: var(--black);
@@ -52,15 +54,17 @@
     --accent:  var(--blue);
 }
 [theme="dark"] .about {
-    --text: var(--pink);
+    --text: var(--white);
     --background: var(--black);
-    --accent:  var(--purple);
+    --accent:  var(--pink);
 }
 
+
+
 [theme="color"] .portfolio {
-    --text: var(--white);
+    --text: var(--black);
     --background: var(--red);
-    --accent:  var(--black);
+    --accent:  var(--white);
 }
 
 [theme="color"] .projects {
@@ -76,14 +80,14 @@
 }
 
 [theme="color"] .knowledge {
-    --text: var(--white);
+    --text: var(--black);
     --background: var(--blue);
-    --accent:  var(--black);
+    --accent:  var(--white);
 }
 
 [theme="color"] .about {
-    --text: var(--pink);
-    --background: var(--purple);
+    --text: var(--black);
+    --background: var(--pink);
     --accent:  var(--white);
 }
 
