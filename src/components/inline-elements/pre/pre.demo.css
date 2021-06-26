@@ -8,19 +8,20 @@ pre {
     margin: var(--title-margin-3) 0!important;
 }
 
-/* Override of the normal text and accent color to ensure a consistent black background in color mode */
 [theme="color"] pre {
     --text: var(--white);
     --accent: var(--black);
 }
 
-/* Overrides for accessibility reasons */
-[theme="light"] .knowledge pre *, 
-[theme="light"] .portfolio pre * {
-    --text: var(--white);
-}
-[theme="dark"] .journal pre *, 
-[theme="dark"] .projects pre * {
+[theme="light"] pre {
     --text: var(--black);
+    --accent: var(--light-grey);
+    --background: var(--dark-grey);
+}
+
+[theme="dark"] pre {
+    --text: var(--white);
+    --accent: var(--dark-grey);
+    --background: var(--light-grey);
 }
 
