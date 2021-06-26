@@ -14,3 +14,7 @@
     text-decoration:none;
     font-size: 18px;
 }
+
+[theme="dark"] .nav--main a  {
+    color: var(--accent);
+}
