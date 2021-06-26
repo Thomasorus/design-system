@@ -77,11 +77,24 @@ select {
     --light-grey: hsla(0, 0%, 93%, 1);
     --dark-grey: hsla(0, 0%, 13%, 1);
 
-    --yellow: hsla(50, 95%, 68%, 1);
+    /* Pastel colors */
+    /* --yellow: hsla(50, 95%, 68%, 1);
     --teal: hsla(147, 41%, 75%, 1);
     --pink: hsla(340, 80%, 90%, 1);
     --blue: hsla(245, 38%, 83%, 1);
-    --red: hsla(13, 78%, 69%, 1);
+    --red: hsla(13, 78%, 69%, 1); */
+
+    /* Original colors */
+    --yellow: hsla(50, 100%, 50%, 1);
+    --teal: hsla(147, 48%, 68%, 1);
+    --purple: hsla(263, 20%, 20%, 1);
+    --pink: hsla(340, 80%, 90%, 1);
+    --blue: hsla(246, 71%, 55%, 1);
+    /* --red: hsla(13, 100%, 43%, 1); */
+
+    /* Temp colors */
+    --red: hsla(9, 90%, 57%, 1);
+    --blue:hsla(198, 71%, 55%, 1);
 } 
 :root {
     /* GLOBAL SCALES */
@@ -489,30 +502,30 @@ p {
     font-size: calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem));
     font-size: var(--paragraph-s);
 } 
-figure > blockquote {
+blockquote {
     padding:calc(var(--f-0-min, 23)/16*1rem + (var(--f-0-max, 36) - var(--f-0-min, 23))*(0.08929vw - 0.01786rem)) calc(var(--f-0-min, 15)/16*1rem + (var(--f-0-max, 42) - var(--f-0-min, 15))*(0.08929vw - 0.01786rem)) 0 calc(var(--f-0-min, 15)/16*1rem + (var(--f-0-max, 42) - var(--f-0-min, 15))*(0.08929vw - 0.01786rem));
     padding:var(--blockquote-padding-y) var(--blockquote-padding-x) 0 var(--blockquote-padding-x);
 } 
-figure > figcaption {
+blockquote + figcaption {
     padding:calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem)) calc(var(--f-0-min, 23)/16*1rem + (var(--f-0-max, 36) - var(--f-0-min, 23))*(0.08929vw - 0.01786rem)) calc(var(--f-0-min, 15)/16*1rem + (var(--f-0-max, 42) - var(--f-0-min, 15))*(0.08929vw - 0.01786rem)) calc(var(--f-0-min, 23)/16*1rem + (var(--f-0-max, 36) - var(--f-0-min, 23))*(0.08929vw - 0.01786rem));
     padding:var(--paragraph-s) var(--blockquote-padding-y) var(--blockquote-padding-x) var(--blockquote-padding-y);
 } 
 [theme="color"] blockquote,
-[theme="color"] figcaption {
+[theme="color"] blockquote + figcaption {
     background-color:hsla(0, 0%, 7%, 1);
     background-color:var(--accent);
     border-left: 5px solid hsla(0, 0%, 7%, 1);
     border-left: 5px solid var(--text);
 } 
 [theme="light"] blockquote,
-[theme="light"] figcaption {
+[theme="light"] blockquote + figcaption {
     background-color:hsla(0, 0%, 93%, 1);
     background-color:var(--light-grey);
     border-left: 5px solid hsla(0, 0%, 7%, 1);
     border-left: 5px solid var(--accent);
 } 
 [theme="dark"] blockquote,
-[theme="dark"] figcaption {
+[theme="dark"] blockquote + figcaption {
     background-color:hsla(0, 0%, 13%, 1);
     background-color:var(--dark-grey);
     border-left: 5px solid hsla(0, 0%, 7%, 1);
