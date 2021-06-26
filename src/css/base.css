@@ -1,4 +1,17 @@
 
+:root {
+    --base-font-size-smin: (var(--f-0-min, 14)); 
+    --base-font-size-smax: (var(--f-0-max, 20));
+    --base-font-size: calc(((var(--base-font-size-smin) / 16) * 1rem) + (var(--base-font-size-smax) - var(--base-font-size-smin)) * var(--fluid-bp));
+
+    --base-line-height-s-min: (var(--f-0-min, 24)); 
+    --base-line-height-s-max: (var(--f-0-max, 30));
+  
+    /* T-shirt sizes */
+    --base-line-height: calc(((var(--base-line-height-s-min) / 16) * 1rem) + (var(--base-line-height-s-max) - var(--base-line-height-s-min)) * var(--fluid-bp));
+    
+}
+
 * {
     scrollbar-color: var(--background) var(--text);
 }
@@ -25,13 +38,13 @@ img {
     max-width: 100%;
 }
 
+
+body {
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+}
+
 main {
 margin: var(--margin-s);
 }
 
-
-:root {
-    --paragraph-s-min: (var(--f-0-min, 14)); 
-    --paragraph-s-max: (var(--f-0-max, 20));
-    --paragraph-s: calc(((var(--paragraph-s-min) / 16) * 1rem) + (var(--paragraph-s-max) - var(--paragraph-s-min)) * var(--fluid-bp));
-}
