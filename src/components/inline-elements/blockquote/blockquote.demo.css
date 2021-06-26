@@ -1,0 +1,42 @@
+
+figure > blockquote {
+    padding:var(--blockquote-padding-y) var(--blockquote-padding-x) 0 var(--blockquote-padding-x);
+}
+figure > figcaption {
+    padding:var(--paragraph-s) var(--blockquote-padding-y) var(--blockquote-padding-x) var(--blockquote-padding-y);
+}
+
+
+[theme="color"] blockquote,
+[theme="color"] figcaption {
+    background-color:var(--accent);
+    border-left: 5px solid var(--text);
+}
+
+[theme="light"] blockquote,
+[theme="light"] figcaption {
+    background-color:var(--light-grey);
+    border-left: 5px solid var(--accent);
+}
+
+[theme="dark"] blockquote,
+[theme="dark"] figcaption {
+    background-color:var(--dark-grey);
+    border-left: 5px solid var(--accent);
+}
+
+
+:root {
+    --blockquote-padding-x-s-min: (var(--f-0-min, 15)); 
+    --blockquote-padding-x-s-max: (var(--f-0-max, 42));
+
+    /* T-shirt sizes */
+    --blockquote-padding-x: calc(((var(--blockquote-padding-x-s-min) / 16) * 1rem) + (var(--blockquote-padding-x-s-max) - var(--blockquote-padding-x-s-min)) * var(--fluid-bp));
+
+    --blockquote-padding-y-s-min: (var(--f-0-min, 23)); 
+    --blockquote-padding-y-s-max: (var(--f-0-max, 36));
+  
+    /* T-shirt sizes */
+    --blockquote-padding-y: calc(((var(--blockquote-padding-y-s-min) / 16) * 1rem) + (var(--blockquote-padding-y-s-max) - var(--blockquote-padding-y-s-min)) * var(--fluid-bp));
+  
+}
