@@ -75,7 +75,10 @@ select {
     --white: hsla(0, 0%, 100%, 1);
 
     --light-grey: hsla(0, 0%, 93%, 1);
+    --middle-grey: hsla(0, 0%, 7%, 0.5);
     --dark-grey: hsla(0, 0%, 13%, 1);
+
+    --focus: hsla(0, 0%, 40%, 1);
 
     /* Pastel colors */
     /* --yellow: hsla(50, 95%, 68%, 1);
@@ -112,9 +115,9 @@ select {
     --margin-s: calc(var(--margin-s-min)/16*1rem + (var(--margin-s-max) - var(--margin-s-min))*var(--fluid-bp));
   
     /* Vertical paragraph margin */
-    --paragraph-s-min: (var(--f-0-min, 25)); 
-    --paragraph-s-max: (var(--f-0-max, 30));
-    --paragraph-s: calc(var(--paragraph-s-min)/16*1rem + (var(--paragraph-s-max) - var(--paragraph-s-min))*var(--fluid-bp));
+    --base-font-size-min: (var(--f-0-min, 25)); 
+    --base-font-size-max: (var(--f-0-max, 30));
+    --base-font-size: calc(var(--base-font-size-min)/16*1rem + (var(--base-font-size-max) - var(--base-font-size-min))*var(--fluid-bp));
 
     /* TODO : see if possible to merge all margins scales into one */
     
@@ -267,6 +270,18 @@ html { font-family: 'Inter', sans-serif; }
     color:hsla(0, 0%, 7%, 1);
     color:var(--accent);
 } 
+:root {
+    --base-font-size-smin: (var(--f-0-min, 14)); 
+    --base-font-size-smax: (var(--f-0-max, 20));
+    --base-font-size: calc(var(--base-font-size-smin)/16*1rem + (var(--base-font-size-smax) - var(--base-font-size-smin))*var(--fluid-bp));
+
+    --base-line-height-s-min: (var(--f-0-min, 24)); 
+    --base-line-height-s-max: (var(--f-0-max, 30));
+  
+    /* T-shirt sizes */
+    --base-line-height: calc(var(--base-line-height-s-min)/16*1rem + (var(--base-line-height-s-max) - var(--base-line-height-s-min))*var(--fluid-bp));
+    
+} 
 * {
     scrollbar-color: hsla(0, 0%, 100%, 1) hsla(0, 0%, 7%, 1);
     scrollbar-color: var(--background) var(--text);
@@ -290,14 +305,15 @@ figcaption, */
 img {
     max-width: 100%;
 } 
+body {
+    font-size: calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem));
+    font-size: var(--base-font-size);
+    line-height: calc(var(--f-0-min, 24)/16*1rem + (var(--f-0-max, 30) - var(--f-0-min, 24))*(0.08929vw - 0.01786rem));
+    line-height: var(--base-line-height);
+} 
 main {
 margin: calc(var(--f-0-min, 20)/16*1rem + (var(--f-0-max, 64) - var(--f-0-min, 20))*(0.08929vw - 0.01786rem));
 margin: var(--margin-s);
-} 
-:root {
-    --paragraph-s-min: (var(--f-0-min, 14)); 
-    --paragraph-s-max: (var(--f-0-max, 20));
-    --paragraph-s: calc(var(--paragraph-s-min)/16*1rem + (var(--paragraph-s-max) - var(--paragraph-s-min))*var(--fluid-bp));
 } 
 :root {
     --title-scale-6: clamp(14.4px, 12.64px + 0.58vw, 20.96px);
@@ -416,35 +432,62 @@ h1 {
 h1, h2, h3, h4, h5, h6{
     font-family: "Editorial New Regular", serif;
 } 
+h1:hover a, 
+h2:hover a, 
+h3:hover a, 
+h4:hover a, 
+h5:hover a, 
+h6:hover a {
+    color:hsla(0, 0%, 7%, 1);
+    color:var(--text);
+    background-color: transparent;
+} 
 a {
     color:hsla(0, 0%, 7%, 1);
     color:var(--text);
+    padding:5px 10px;
+    margin:-5px -10px;
+    transition: 0.25s;
 } 
-a:hover {
-    
+article a {
+    padding:inherit;
+    margin:initial;
+} 
+a:hover,
+a[target="_blank"]:hover,
+a[target="_blank"]:hover:after  {
+    color:hsla(0, 0%, 100%, 1);
+    color:var(--background);
+    background:hsla(0, 0%, 7%, 1);
+    background:var(--text);
+    transition: 0.25s;
+} 
+a:focus {
+    color:hsla(0, 0%, 100%, 1);
+    color:var(--background);
+    background:hsla(0, 0%, 40%, 1);
+    background:var(--focus);
+    transition: 0.25s;
 } 
 a:active {
-
-} 
-a:visited {
-    
+    color:hsla(0, 0%, 100%, 1);
+    color:var(--background);
+    background:hsla(0, 0%, 7%, 1);
+    background:var(--accent);
+    transition: 0.25s;
 } 
 a[target="_blank"] {
-    color: hsla(0, 0%, 7%, 1);
-    color: var(--text);
     position: relative;
 } 
 a[target="_blank"]:after {
     content: "\2197";
-    color:hsla(0, 0%, 7%, 1);
-    color:var(--text);
 } 
 code {
     font-family: "IBM Plex Mono", monospace;
     color:hsla(0, 0%, 7%, 1);
     color:var(--text);
     font-size: calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem));
-    font-size: var(--paragraph-s);
+    font-size: var(--base-font-size);
 } 
 pre {
     background-color:hsla(0, 0%, 7%, 1);
@@ -474,17 +517,52 @@ pre {
     --background: var(--light-grey);
 } 
 ul {
-    list-style-type: disc;
+    padding-left:2em;
+} 
+ul:not([role="list"]) li {
+    padding-left: 0.75em;
+} 
+ul li::marker{
     font-size: calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem));
-    font-size: var(--paragraph-s);
+    font-size: var(--base-font-size);
+} 
+[theme="color"] ul li::marker{
+    --bullet-color: var(--accent);
+    color:var(--bullet-color);
+} 
+[theme="light"] ul li::marker{
+    --bullet-color: hsla(0, 0%, 7%, 0.5);
+    color:var(--bullet-color);
+} 
+[theme="dark"] ul li::marker{
+    --bullet-color: hsla(0, 0%, 100%, 0.5);
+    color:var(--bullet-color);
 } 
 ul[role="list"] {
     padding:0;
     margin:0;
 } 
 ol {
+    padding-left:2em;
+} 
+ol:not([role="list"]) li {
+    padding-left: 1em;
+} 
+ol li::marker{
     font-size: calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem));
-    font-size: var(--paragraph-s);
+    font-size: var(--base-font-size);
+} 
+[theme="color"] ol li::marker{
+    --number-color: var(--accent);
+    color:var(--number-color);
+} 
+[theme="light"] ol li::marker{
+    --number-color: hsla(0, 0%, 7%, 0.5);
+    color:var(--number-color);
+} 
+[theme="dark"] ol li::marker{
+    --number-color: hsla(0, 0%, 100%, 0.5);
+    color:var(--number-color);
 } 
 ol[role="list"] {
     padding:0;
@@ -498,17 +576,17 @@ hr {
     margin: calc(var(--f-0-min, 70)*0.75/16*1rem + (var(--f-0-max, 100)*0.75 - var(--f-0-min, 70)*0.75)*(0.08929vw - 0.01786rem)) 0!important;
     margin: var(--title-margin-2) 0!important;
 } 
-p {
-    font-size: calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem));
-    font-size: var(--paragraph-s);
-} 
+/* p {
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+} */ 
 blockquote {
     padding:calc(var(--f-0-min, 23)/16*1rem + (var(--f-0-max, 36) - var(--f-0-min, 23))*(0.08929vw - 0.01786rem)) calc(var(--f-0-min, 15)/16*1rem + (var(--f-0-max, 42) - var(--f-0-min, 15))*(0.08929vw - 0.01786rem)) 0 calc(var(--f-0-min, 15)/16*1rem + (var(--f-0-max, 42) - var(--f-0-min, 15))*(0.08929vw - 0.01786rem));
     padding:var(--blockquote-padding-y) var(--blockquote-padding-x) 0 var(--blockquote-padding-x);
 } 
 blockquote + figcaption {
     padding:calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem)) calc(var(--f-0-min, 23)/16*1rem + (var(--f-0-max, 36) - var(--f-0-min, 23))*(0.08929vw - 0.01786rem)) calc(var(--f-0-min, 15)/16*1rem + (var(--f-0-max, 42) - var(--f-0-min, 15))*(0.08929vw - 0.01786rem)) calc(var(--f-0-min, 23)/16*1rem + (var(--f-0-max, 36) - var(--f-0-min, 23))*(0.08929vw - 0.01786rem));
-    padding:var(--paragraph-s) var(--blockquote-padding-y) var(--blockquote-padding-x) var(--blockquote-padding-y);
+    padding:var(--base-font-size) var(--blockquote-padding-y) var(--blockquote-padding-x) var(--blockquote-padding-y);
 } 
 [theme="color"] blockquote,
 [theme="color"] blockquote + figcaption {
@@ -555,11 +633,11 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     gap:calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem));
-    gap:var(--paragraph-s);
+    gap:var(--base-font-size);
 } 
 article > *+* {
     margin-top: calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem));
-    margin-top: var(--paragraph-s);
+    margin-top: var(--base-font-size);
     position: relative;
 } 
 article h1 + picture {
@@ -611,7 +689,7 @@ nav[role="breadcrumb"] {
     background-color: var(--background);
     z-index: 1;
     font-size: calc(var(--f-0-min, 14)/16*1rem + (var(--f-0-max, 20) - var(--f-0-min, 14))*(0.08929vw - 0.01786rem));
-    font-size: var(--paragraph-s);
+    font-size: var(--base-font-size);
 } 
 [theme="dark"] nav[role="breadcrumb"] {
     color:hsla(0, 0%, 7%, 1);
