@@ -6,3 +6,8 @@ nav[role="breadcrumb"] {
     z-index: 1;
     font-size: var(--paragraph-s);
 }
+
+
+[theme="dark"] nav[role="breadcrumb"] {
+    color:var(--accent);
+}
