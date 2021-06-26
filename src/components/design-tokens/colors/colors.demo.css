@@ -2,10 +2,13 @@
 :root {
     --black: hsla(0, 0%, 7%, 1);
     --white: hsla(0, 0%, 100%, 1);
-    --yellow: hsla(50, 100%, 50%, 1);
-    --teal: hsla(147, 48%, 68%, 1);
-    --purple: hsla(263, 20%, 20%, 1);
+
+    --light-grey: hsla(0, 0%, 93%, 1);
+    --dark-grey: hsla(0, 0%, 13%, 1);
+
+    --yellow: hsla(50, 95%, 68%, 1);
+    --teal: hsla(147, 41%, 75%, 1);
     --pink: hsla(340, 80%, 90%, 1);
-    --blue: hsla(246, 71%, 55%, 1);
-    --red: hsla(13, 100%, 43%, 1);
+    --blue: hsla(245, 38%, 83%, 1);
+    --red: hsla(13, 78%, 69%, 1);
 }
