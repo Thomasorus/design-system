@@ -18,9 +18,9 @@ article,
 footer {
 max-width: none;
 }
-
+/* 
 figure,
-figcaption,
+figcaption, */
 img {
     max-width: 100%;
 }
