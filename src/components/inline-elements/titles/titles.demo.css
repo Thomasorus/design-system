@@ -75,3 +75,13 @@ h1 {
 h1, h2, h3, h4, h5, h6{
     font-family: "Editorial New Regular", serif;
 }
+
+h1:hover a, 
+h2:hover a, 
+h3:hover a, 
+h4:hover a, 
+h5:hover a, 
+h6:hover a {
+    color:var(--text);
+    background-color: transparent;
+}
