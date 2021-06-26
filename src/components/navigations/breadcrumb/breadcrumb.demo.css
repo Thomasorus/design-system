@@ -4,7 +4,7 @@ nav[role="breadcrumb"] {
     margin: 0 var(--margin-s);
     background-color: var(--background);
     z-index: 1;
-    font-size: var(--paragraph-s);
+    font-size: var(--base-font-size);
 }
 
 

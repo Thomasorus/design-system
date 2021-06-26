@@ -14,9 +14,9 @@
     --margin-s: calc(((var(--margin-s-min) / 16) * 1rem) + (var(--margin-s-max) - var(--margin-s-min)) * var(--fluid-bp));
   
     /* Vertical paragraph margin */
-    --paragraph-s-min: (var(--f-0-min, 25)); 
-    --paragraph-s-max: (var(--f-0-max, 30));
-    --paragraph-s: calc(((var(--paragraph-s-min) / 16) * 1rem) + (var(--paragraph-s-max) - var(--paragraph-s-min)) * var(--fluid-bp));
+    --base-font-size-min: (var(--f-0-min, 25)); 
+    --base-font-size-max: (var(--f-0-max, 30));
+    --base-font-size: calc(((var(--base-font-size-min) / 16) * 1rem) + (var(--base-font-size-max) - var(--base-font-size-min)) * var(--fluid-bp));
 
     /* TODO : see if possible to merge all margins scales into one */
     
