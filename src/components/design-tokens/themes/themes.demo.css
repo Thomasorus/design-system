@@ -30,6 +30,11 @@
     --background: var(--white);
     --accent:  var(--pink);
 }
+[theme="light"] .home {
+    --text: var(--black);
+    --background: var(--white);
+    --accent:  var(--light);
+}
 
 
 
@@ -58,6 +63,12 @@
     --background: var(--black);
     --accent:  var(--pink);
 }
+[theme="dark"] .home {
+    --text: var(--white);
+    --background: var(--black);
+    --accent:  var(--light-grey);
+}
+
 
 
 
@@ -90,9 +101,15 @@
     --background: var(--pink);
     --accent:  var(--white);
 }
+[theme="color"] .home {
+    --text: var(--black);
+    --background: var(--light-grey);
+    --accent:  var(--white);
+}
 
 
-.portfolio, .projects, .journal, .knowledge, .about {
+
+.portfolio, .projects, .journal, .knowledge, .about, .home {
     background-color: var(--background);
     color: var(--text);
 }
