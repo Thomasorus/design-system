@@ -722,6 +722,9 @@ section[role="complementary"] details {
     grid-template-columns: 1fr auto;
     gap:0.6em;
 } 
+.time-row__title {
+    font-family: "Editorial New Regular", serif;
+} 
 .time-row-more {
     margin-top: var(--margin-s);
     min-width: 100%;
