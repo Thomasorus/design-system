@@ -1,12 +1,72 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8" />
 	<title>Preview Layout</title>
-  <meta name="viewport" content="width=device-width">
-  	<link rel="stylesheet" href="{{ path '/index.css' }}">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="{{ path '/index.css' }}">
 </head>
+
 <body>
-	{{{ yield }}}
+	<code>Color theme</code>
+	<div theme="color">
+		<div class="portfolio">
+			{{{ yield }}}
+		</div>
+		<div class="projects">
+			{{{ yield }}}
+		</div>
+		<div class="journal">
+			{{{ yield }}}
+		</div>
+
+		<div class="knowledge">
+			{{{ yield }}}
+		</div>
+		<div class="about">
+			{{{ yield }}}
+		</div>
+	</div>
+	<br>
+	<code>Light theme</code>
+	<div theme="light">
+		<div class="portfolio">
+			{{{ yield }}}
+		</div>
+		<div class="projects">
+			{{{ yield }}}
+		</div>
+		<div class="journal">
+			{{{ yield }}}
+		</div>
+
+		<div class="knowledge">
+			{{{ yield }}}
+		</div>
+		<div class="about">
+			{{{ yield }}}
+		</div>
+	</div>
+	<br>
+	<code>Dark theme</code>
+	<div theme="dark">
+		<div class="portfolio">
+			{{{ yield }}}
+		</div>
+		<div class="projects">
+			{{{ yield }}}
+		</div>
+		<div class="journal">
+			{{{ yield }}}
+		</div>
+		<div class="knowledge">
+			{{{ yield }}}
+		</div>
+		<div class="about">
+			{{{ yield }}}
+		</div>
+	</div>
 </body>
+
 </html>
