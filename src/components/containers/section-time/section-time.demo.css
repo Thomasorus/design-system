@@ -1,7 +1,7 @@
 section[role="complementary"] {
     background-color: var(--accent);   
     width: 100%;
-    padding: var(--base-font-size) var(--margin-s);
+    padding: 0.5em var(--margin-s);
     min-width: 100%;
     position: sticky;
     bottom: 0;
@@ -13,25 +13,48 @@ section[role="complementary"] details {
     flex-flow: row wrap;
     justify-content: space-between;
     gap: var(--margin-s);
+    cursor: pointer;
+    justify-items:end;
 }
 
 .time-row {
     min-width: 100%;
-    display:flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: var(--margin-s);
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap:0.6em;
 }
 
 .time-row-more {
+    margin-top: var(--margin-s);
     min-width: 100%;
     display:grid;
     grid-template-columns: 1fr auto;
     text-align: right;
+    justify-items:end;
+    gap:0.6em;
 }
 
-@media screen and (max-width:500px) {
+.time-row-more dt,
+.time-row-more dd {
+    margin:0;
+    padding:0;
+}
+
+@media screen and (max-width:640px) {
     section[role="complementary"] {
         position: static;
     }
+
+    .time-row {
+        grid-template-columns: 1fr;
+    }
+
+    .time-row {
+        justify-items:start;
+    }
+    
+}
+
+[theme="dark"] section[role="complementary"]  {
+    color:var(--background);
 }
