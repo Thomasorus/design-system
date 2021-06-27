@@ -1,6 +1,32 @@
+.nav--secondary {
+    margin: var(--margin-s);
+}
+
 .nav--secondary ul {
     display:flex;
-    flex-flow: row wrap;
-    justify-content:center;
     gap: 5px 20px;
+}
+
+.nav--secondary li {
+    height: auto;
+}
+
+.nav--secondary a {
+    display: block;
+    height: 3em;
+}
+
+
+.nav--secondary svg {
+    display: block;
+    height: 100%;
+}
+
+.nav--secondary a:hover {
+    background-color: var(--text);
+    border-radius: 100%;
+}
+
+.nav--secondary a:hover svg {
+    fill:var(--accent);
 }
