@@ -24,6 +24,10 @@ section[role="complementary"] details {
     gap:0.6em;
 }
 
+.time-row__title {
+    font-family: "Editorial New Regular", serif;
+}
+
 .time-row-more {
     margin-top: var(--margin-s);
     min-width: 100%;
