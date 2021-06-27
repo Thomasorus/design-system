@@ -48,6 +48,15 @@ main {
 margin: var(--margin-s);
 }
 
+
+dl > dt {
+    margin-top: var(--base-font-size);
+}
+
+dl dd {
+    padding-left:2em;
+}
+
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
