@@ -92,7 +92,7 @@ select {
     --teal: hsla(147, 48%, 68%, 1);
     --purple: hsla(263, 20%, 20%, 1);
     --pink: hsla(340, 80%, 90%, 1);
-    --blue: hsla(246, 71%, 55%, 1);
+    /* --blue: hsla(246, 71%, 55%, 1); */
     /* --red: hsla(13, 100%, 43%, 1); */
 
     /* Temp colors */
@@ -323,6 +323,16 @@ body {
 main {
 margin: var(--margin-s);
 } 
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  } 
 :root {
     --title-scale-6: clamp(0.90rem, 0.79rem + 0.58vw, 1.31rem);
     --title-scale-5: clamp(1.09rem, 0.93rem + 0.79vw, 1.64rem);
@@ -399,15 +409,16 @@ h1, h2, h3, h4, h5, h6{
     font-family: "Editorial New Regular", serif;
     display: inline-block;
 } 
-h1:hover, 
-h2:hover, 
-h3:hover, 
-h4:hover, 
-h5:hover, 
-h6:hover {
+h1:hover a, 
+h2:hover a, 
+h3:hover a, 
+h4:hover a, 
+h5:hover a, 
+h6:hover a {
     color:initial;
     background-color: initial;
 } 
+/* 
 h1 a:hover, 
 h2 a:hover, 
 h3 a:hover, 
@@ -416,7 +427,7 @@ h5 a:hover,
 h6 a:hover {
     color:unset;
     background-color: unset;
-} 
+}  */ 
 a {
     color:var(--text);
     padding:5px 10px;
@@ -682,6 +693,39 @@ article h1 + picture {
     }
     
 } 
+section[role="complementary"] {
+    background-color: var(--accent);   
+    width: 100%;
+    padding: var(--base-font-size) var(--margin-s);
+    min-width: 100%;
+    position: sticky;
+    bottom: 0;
+} 
+section[role="complementary"] details {
+    min-width: 100%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: var(--margin-s);
+} 
+.time-row {
+    min-width: 100%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: var(--margin-s);
+} 
+.time-row-more {
+    min-width: 100%;
+    display:grid;
+    grid-template-columns: 1fr auto;
+    text-align: right;
+} 
+@media screen and (max-width:500px) {
+    section[role="complementary"] {
+        position: static;
+    }
+} 
 .nav--main {
     position:sticky;
     top:var(--margin-s);
@@ -699,11 +743,30 @@ article h1 + picture {
 [theme="dark"] .nav--main a  {
     color: var(--accent);
 } 
+.nav--secondary {
+    margin: var(--margin-s);
+} 
 .nav--secondary ul {
     display:flex;
-    flex-flow: row wrap;
-    justify-content:center;
     gap: 5px 20px;
+} 
+.nav--secondary li {
+    height: auto;
+} 
+.nav--secondary a {
+    display: block;
+    height: 3em;
+} 
+.nav--secondary svg {
+    display: block;
+    height: 100%;
+} 
+.nav--secondary a:hover {
+    background-color: var(--text);
+    border-radius: 100%;
+} 
+.nav--secondary a:hover svg {
+    fill:var(--accent);
 } 
 nav[role="breadcrumb"] {
     position: sticky;
