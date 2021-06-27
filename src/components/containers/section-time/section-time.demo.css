@@ -1,0 +1,37 @@
+section[role="complementary"] {
+    background-color: var(--accent);   
+    width: 100%;
+    padding: var(--base-font-size) var(--margin-s);
+    min-width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+section[role="complementary"] details {
+    min-width: 100%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: var(--margin-s);
+}
+
+.time-row {
+    min-width: 100%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: var(--margin-s);
+}
+
+.time-row-more {
+    min-width: 100%;
+    display:grid;
+    grid-template-columns: 1fr auto;
+    text-align: right;
+}
+
+@media screen and (max-width:500px) {
+    section[role="complementary"] {
+        position: static;
+    }
+}
