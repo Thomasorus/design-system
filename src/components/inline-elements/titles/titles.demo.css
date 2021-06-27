@@ -77,16 +77,16 @@ h1, h2, h3, h4, h5, h6{
     display: inline-block;
 }
 
-h1:hover, 
-h2:hover, 
-h3:hover, 
-h4:hover, 
-h5:hover, 
-h6:hover {
+h1:hover a, 
+h2:hover a, 
+h3:hover a, 
+h4:hover a, 
+h5:hover a, 
+h6:hover a {
     color:initial;
     background-color: initial;
 }
-
+/* 
 h1 a:hover, 
 h2 a:hover, 
 h3 a:hover, 
@@ -95,4 +95,4 @@ h5 a:hover,
 h6 a:hover {
     color:unset;
     background-color: unset;
-}
+}  */
