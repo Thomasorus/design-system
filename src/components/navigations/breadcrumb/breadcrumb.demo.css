@@ -5,6 +5,7 @@ nav[role="breadcrumb"] {
     background-color: var(--background);
     z-index: 1;
     font-size: var(--base-font-size);
+    display: inline;
 }
 
 
