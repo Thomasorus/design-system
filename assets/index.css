@@ -323,6 +323,12 @@ body {
 main {
 margin: var(--margin-s);
 } 
+dl > dt {
+    margin-top: var(--base-font-size);
+} 
+dl dd {
+    padding-left:2em;
+} 
 .visually-hidden {
     clip: rect(0 0 0 0);
     -webkit-clip-path: inset(50%);
@@ -688,7 +694,7 @@ article h1 + picture {
     article h1 + picture {
         position: static;
         margin:inherit;
-        max-width: 100%;
+        max-width: 60ch;
         right:unset;
     }
     
@@ -696,7 +702,7 @@ article h1 + picture {
 section[role="complementary"] {
     background-color: var(--accent);   
     width: 100%;
-    padding: var(--base-font-size) var(--margin-s);
+    padding: 0.5em var(--margin-s);
     min-width: 100%;
     position: sticky;
     bottom: 0;
@@ -707,24 +713,45 @@ section[role="complementary"] details {
     flex-flow: row wrap;
     justify-content: space-between;
     gap: var(--margin-s);
+    cursor: pointer;
+    justify-items:end;
 } 
 .time-row {
     min-width: 100%;
-    display:flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: var(--margin-s);
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap:0.6em;
 } 
 .time-row-more {
+    margin-top: var(--margin-s);
     min-width: 100%;
     display:grid;
     grid-template-columns: 1fr auto;
     text-align: right;
+    justify-items:end;
+    gap:0.6em;
 } 
-@media screen and (max-width:500px) {
+.time-row-more dt,
+.time-row-more dd {
+    margin:0;
+    padding:0;
+} 
+@media screen and (max-width:640px) {
     section[role="complementary"] {
         position: static;
     }
+
+    .time-row {
+        grid-template-columns: 1fr;
+    }
+
+    .time-row {
+        justify-items:start;
+    }
+    
+} 
+[theme="dark"] section[role="complementary"]  {
+    color:var(--background);
 } 
 .nav--main {
     position:sticky;
@@ -772,6 +799,8 @@ nav[role="breadcrumb"] {
     position: sticky;
     top:0;
     margin: 0 var(--margin-s);
+    padding: var(--title-margin-6);
+    padding-left: 0;
     background-color: var(--background);
     z-index: 1;
     font-size: var(--base-font-size);
