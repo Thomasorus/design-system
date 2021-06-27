@@ -14,7 +14,7 @@ article h1 + picture {
     article h1 + picture {
         position: static;
         margin:inherit;
-        max-width: 100%;
+        max-width: 60ch;
         right:unset;
     }
     
