@@ -17,6 +17,11 @@ section[role="complementary"] details {
     justify-items:end;
 }
 
+
+section[role="complementary"] summary::-webkit-details-marker {
+    display:none;
+}
+
 .time-row {
     min-width: 100%;
     display:grid;
