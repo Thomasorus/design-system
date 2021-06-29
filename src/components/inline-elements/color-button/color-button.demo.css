@@ -50,8 +50,13 @@
 }
 
 .color-buttons {
-    top:2em;
+    top:20px;
     left: 0;
+}
+
+.color-buttons li {
+    height: 30px;
+    width: 30px;
 }
 
 .color-buttons {
@@ -66,7 +71,7 @@
     display: flex;
     flex-direction: column!important;
     position: absolute;
-    gap:0;
+    
 }
 
 .color-picker .color-buttons {
@@ -83,15 +88,22 @@
     background:transparent;
     height: 30px;
     width: 30px;
-    font-size: 2em;
     border-radius: 50%;
     cursor: pointer;
     background:var(--accent);
-    z-index: 3;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .color-button:hover {
     background-color: var(--text);
+}
+
+.color-buttons svg {
+    height: 30px;
+    width: 30px;
 }
 
 .color-button:hover svg {
