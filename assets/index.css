@@ -480,7 +480,7 @@ pre {
     border-radius: var(--radius-sm);
     scrollbar-color: var(--background) var(--accent);
     padding:10px;
-    max-width: 80ch;
+    max-width: 60ch;
     margin: var(--title-margin-3) 0!important;
 } 
 [theme="color"] pre {
@@ -560,7 +560,7 @@ blockquote {
     padding:var(--blockquote-padding-y) var(--blockquote-padding-x) 0 var(--blockquote-padding-x);
 } 
 blockquote + figcaption {
-    padding:var(--base-font-size) var(--blockquote-padding-y) var(--blockquote-padding-x) var(--blockquote-padding-y);
+    padding:var(--base-font-size) var(--blockquote-padding-y) var(--blockquote-padding-x) var(--blockquote-padding-x);
 } 
 [theme="color"] blockquote,
 [theme="color"] blockquote + figcaption {
@@ -597,7 +597,7 @@ blockquote + figcaption {
       --figcaption-s: calc(((var(--figcaption-smin) / 16) * 1rem) + (var(--figcaption-smax) - var(--figcaption-smin)) * var(--fluid-bp));
     --figcaption-f: clamp(0.69rem, 0.60rem + 0.45vw, 1.00rem);
 } 
-figure > figcaption {
+figure > picture + figcaption {
     background-color: var(--accent);
     font-size: var(--figcaption-f);
     padding: var(--figcaption-s);
