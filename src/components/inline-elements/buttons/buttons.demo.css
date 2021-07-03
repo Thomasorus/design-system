@@ -16,7 +16,6 @@ button:hover {
     color:var(--background);
     border: 1px solid var(--background);
     background-color: var(--text);
-    border-radius: var(--radius-sm);
     cursor: pointer;
 }
 
@@ -24,7 +23,6 @@ button:active {
     color:var(--text);
     border: 1px solid var(--text);
     background-color: var(--accent);
-    border-radius: var(--radius-sm);
     cursor: pointer;
 }
 
@@ -38,7 +36,6 @@ button:active {
     color:var(--background);
     border: 1px solid var(--background);
     background-color: var(--text);
-    border-radius: var(--radius-sm);
     cursor: pointer;
 }
 
@@ -46,6 +43,5 @@ button:active {
     color:var(--background);
     border: 1px solid var(--text);
     background-color: var(--accent);
-    border-radius: var(--radius-sm);
     cursor: pointer;
 }
