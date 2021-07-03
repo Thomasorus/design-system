@@ -4,7 +4,7 @@ pre {
     border-radius: var(--radius-sm);
     scrollbar-color: var(--background) var(--accent);
     padding:10px;
-    max-width: 80ch;
+    max-width: 60ch;
     margin: var(--title-margin-3) 0!important;
 }
 
