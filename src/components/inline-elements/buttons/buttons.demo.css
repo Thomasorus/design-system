@@ -27,8 +27,8 @@ button:active {
 }
 
 [theme="dark"] button {
-    color:var(--accent);
-    border: 1px solid var(--accent);
+    color:var(--text);
+    border: 1px solid var(--text);
 }
 
 
