@@ -3,6 +3,7 @@ article > *+* {
     position: relative;
 }
 
+article h1 + figure, 
 article h1 + picture {
     position: absolute;
     margin:0;
