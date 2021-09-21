@@ -8,21 +8,10 @@ ol:not([role="list"]) li {
 
 ol li::marker{
     font-size: var(--base-font-size);
-    font-weight: 600;
+    font-weight: 500;
 }
-[theme="color"] ol li::marker{
-    --number-color: var(--accent);
-    color:var(--number-color);
-}
-
-[theme="light"] ol li::marker{
-    --number-color: hsla(0, 0%, 7%, 0.5);
-    color:var(--number-color);
-}
-
-[theme="dark"] ol li::marker{
-    --number-color: hsla(0, 0%, 100%, 0.5);
-    color:var(--number-color);
+ol li::marker{
+    color:var(--border);
 }
 
 ol[role="list"] {
