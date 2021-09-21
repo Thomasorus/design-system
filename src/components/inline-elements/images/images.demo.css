@@ -1,22 +1,22 @@
 :root {
-    --figcaption-smin: (var(--f-0-min, 11)); 
-    --figcaption-smax: (var(--f-0-max, 14));
-      --figcaption-s: calc(((var(--figcaption-smin) / 16) * 1rem) + (var(--figcaption-smax) - var(--figcaption-smin)) * var(--fluid-bp));
-    --figcaption-f: clamp(0.69rem, 0.60rem + 0.45vw, 1.00rem);
+    /* Figcaption spacing, min 11, max 16 */
+    --figcaption-spacing: calc(((11 / 16) * 1rem) + (16 - 11) * var(--fluid-bp));
 }
 
 figure > picture + figcaption {
-    background-color: var(--accent);
-    font-size: var(--figcaption-f);
-    padding: var(--figcaption-s);
+    background-color: var(--background-dark);
+    padding: var(--figcaption-spacing);
     min-width:100%;
     border-bottom-left-radius: var(--radius-sm);
     border-bottom-right-radius: var(--radius-sm);
+    box-shadow: var(--background-dark) 0 0 0 2px;
+
 }
 
 picture img {
     display: block;
-    border: 4px solid var(--accent);
+    box-shadow: var(--background-dark) 0 0 0 2px;
+
 }
 
 figure img {
