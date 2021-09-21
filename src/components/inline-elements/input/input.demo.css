@@ -8,6 +8,8 @@
      --padding-input-x: calc(((9 / 16) * 1rem) + (17 - 9) * var(--fluid-bp));
 }
 
+/* Base styles */
+
 input {
     display: block;
     color: var(--text);
@@ -19,6 +21,39 @@ input {
     outline: transparent;
     width:1ch;
 }
+
+[theme="dark"] input {
+    background-color: var(grey-pitchblack);
+}
+
+
+/* Focus styles */
+
+input:focus {
+    box-shadow: var(--border) 0 0 0 2px;
+}
+
+
+/* Error styles */
+
+input[aria-invalid="true"] {
+    background-color: var(--border);
+}
+
+[theme="light"] input[aria-invalid="true"]:focus {
+    box-shadow: var(--text) 0 0 0 2px;
+}
+
+[theme="dark"] input[aria-invalid="true"]:focus {
+    box-shadow: var(--accent) 0 0 0 2px;
+}
+
+[theme="color"] input[aria-invalid="true"]:focus {
+    box-shadow: var(--background) 0 0 0 2px;
+}
+
+
+/* Width modifiers */
 
 input[data-size="30"] {
     width:30ch;
@@ -39,28 +74,4 @@ input[data-size="5"] {
 
 input[data-size="4"] {
     width:4ch;
-}
-
-input[aria-invalid="true"] {
-    background-color: var(--border);
-}
-
-[theme="dark"] input {
-    background-color: var(grey-pitchblack);
-}
-
-
-
-/* Focus styles */
-
-[theme="color"] input:focus {
-    box-shadow: var(grey-pitchblack) 0 0 0 2px;
-}
-
-[theme="light"] input:focus {
-    box-shadow: var(--grey-dark) 0 0 0 2px;
-}
-
-[theme="dark"] input:focus {
-    box-shadow: var(--grey-darker) 0 0 0 2px;
 }
