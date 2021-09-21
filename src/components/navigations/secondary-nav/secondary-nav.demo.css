@@ -23,10 +23,5 @@
 }
 
 .nav--secondary a:hover {
-    background-color: var(--text);
-    border-radius: 100%;
-}
-
-.nav--secondary a:hover svg {
-    fill:var(--accent);
+    background-color: transparent;
 }
