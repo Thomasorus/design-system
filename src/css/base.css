@@ -1,26 +1,19 @@
-
 :root {
-    --base-font-size-smin: (var(--f-0-min, 14)); 
-    --base-font-size-smax: (var(--f-0-max, 20));
-    --base-font-size: calc(((var(--base-font-size-smin) / 16) * 1rem) + (var(--base-font-size-smax) - var(--base-font-size-smin)) * var(--fluid-bp));
+    /* Base font size, min: 16px, max: 20px */
+    --base-font-size: calc(((16 / 16) * 1rem) + (20 - 16) * var(--fluid-bp));
 
-    --base-line-height-s-min: (var(--f-0-min, 24)); 
-    --base-line-height-s-max: (var(--f-0-max, 30));
-  
-    /* T-shirt sizes */
-    --base-line-height: calc(((var(--base-line-height-s-min) / 16) * 1rem) + (var(--base-line-height-s-max) - var(--base-line-height-s-min)) * var(--fluid-bp));
-    
+    /* Base line height, min: 24, max: 30*/
+    --base-line-height: calc(((24 / 16) * 1rem) + (30 - 24) * var(--fluid-bp));
 }
 
 * {
     scrollbar-color: var(--background) var(--text);
 }
 
-
 * {
     max-width: 60ch;
 }
-  
+
 html,
 body,
 div,
@@ -28,11 +21,12 @@ header,
 nav,
 main,
 article,
-footer
+footer,
 input,
 label {
-max-width: none;
+    max-width: none;
 }
+
 /* 
 figure,
 figcaption, */
@@ -47,21 +41,21 @@ body {
 }
 
 main {
-margin: var(--margin-s);
+    margin: var(--margin-s);
 }
 
 
-dl > dt {
+dl>dt {
     margin-top: var(--base-font-size);
 }
 
 dl dd {
-    padding-left:2em;
+    padding-left: 2em;
 }
 
 fieldset {
-    border:none;
-    padding:0;
+    border: none;
+    padding: 0;
 }
 
 .visually-hidden {
@@ -72,5 +66,4 @@ fieldset {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
-  
+}
