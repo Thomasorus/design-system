@@ -74,30 +74,31 @@ select {
     --black: hsla(0, 0%, 7%, 1);
     --white: hsla(0, 0%, 100%, 1);
 
-    --light-grey: hsla(0, 0%, 93%, 1);
-    --middle-grey: hsla(0, 0%, 7%, 0.5);
-    --dark-grey: hsla(0, 0%, 13%, 1);
+    --light-grey: hsla(0, 0%, 93%, 1); /* EEE */
+    --middle-grey: hsla(0, 0%, 67%, 1); /* AAA */
+    --dark-grey: hsla(0, 0%, 33%, 1); /* 555 */
+    --almost-black-grey: hsla(0, 0%, 13%, 1); /* 222 */
 
     --focus: hsla(0, 0%, 40%, 1);
 
-    /* Pastel colors */
-    /* --yellow: hsla(50, 95%, 68%, 1);
-    --teal: hsla(147, 41%, 75%, 1);
-    --pink: hsla(340, 80%, 90%, 1);
-    --blue: hsla(245, 38%, 83%, 1);
-    --red: hsla(13, 78%, 69%, 1); */
-
     /* Original colors */
-    --yellow: hsla(50, 100%, 50%, 1);
-    --teal: hsla(147, 48%, 68%, 1);
-    --purple: hsla(263, 20%, 20%, 1);
-    --pink: hsla(340, 80%, 90%, 1);
-    /* --blue: hsla(246, 71%, 55%, 1); */
-    /* --red: hsla(13, 100%, 43%, 1); */
+    --yellow: hsla(50, 88%, 58%, 1);
+    --yellow-dark: hsla(50, 73%, 53%, 1);
+    --yellow-darker: hsl(50,66%,36%, 1);
+    --teal: hsla(147, 75%, 68%, 1);
+    --teal-dark: hsla(147, 49%, 58%, 1);
+    --teal-darker: hsl(146,38%,45%, 1);
+    --pink: hsla(340, 100%, 84%, 1);
+    --pink-dark: hsla(340, 100%, 76%, 1);
+    --pink-darker: hsla(340, 71%, 49%, 1);
 
     /* Temp colors */
-    --red: hsla(9, 70%, 57%, 1);
-    --blue:hsla(198, 71%, 55%, 1);
+    --red: hsla(14, 88%, 62%, 1);
+    --red-dark: hsla(14, 71%, 54%, 1);
+    --red-darker: hsla(14, 83%, 43%, 1);
+    --blue:hsla(238, 98%, 78%, 1);
+    --blue-dark: hsla(238, 79%, 70%, 1);
+    --blue-darker: hsla(237, 63%, 60%, 1);
 } 
 :root {
     /* GLOBAL SCALES */
@@ -131,96 +132,134 @@ select {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--black);
+    --background-dark: var(--white);
+    --border: var(--middle-grey);
 } 
 [theme="light"] .portfolio {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--red);
+    --background-dark: var(--white);
+    --border: var(--middle-grey);
 } 
 [theme="light"] .projects {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--teal);
+    --background-dark: var(--white);
+    --border: var(--middle-grey);
 } 
 [theme="light"] .journal {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--yellow);
+    --background-dark: var(--white);
+    --border: var(--middle-grey);
 } 
 [theme="light"] .knowledge {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--blue);
+    --background-dark: var(--white);
+    --border: var(--middle-grey);
 } 
 [theme="light"] .about {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--pink);
+    --background-dark: var(--white);
+    --border: var(--middle-grey);
 } 
 [theme="light"] .home {
     --text: var(--black);
     --background: var(--white);
     --accent:  var(--light);
+    --background-dark: var(--white);
+    --border: var(--middle-grey);
 } 
 [theme="dark"] .portfolio {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--red);
+    --background-dark: var(--black);
+    --border: var(--dark-grey);
 } 
 [theme="dark"] .projects {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--teal);
+    --background-dark: var(--black);
+    --border: var(--dark-grey);
 } 
 [theme="dark"] .journal {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--yellow);
+    --background-dark: var(--black);
+    --border: var(--dark-grey);
 } 
 [theme="dark"] .knowledge {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--blue);
+    --background-dark: var(--black);
+    --border: var(--dark-grey);
 } 
 [theme="dark"] .about {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--pink);
+    --background-dark: var(--black);
+    --border: var(--dark-grey);
 } 
 [theme="dark"] .home {
     --text: var(--white);
     --background: var(--black);
     --accent:  var(--light-grey);
+    --background-dark: var(--black);
+    --border: var(--dark-grey);
 } 
 [theme="color"] .portfolio {
     --text: var(--black);
     --background: var(--red);
     --accent:  var(--white);
+    --background-dark: var(--red-dark);
+    --border: var(--red-darker);
 } 
 [theme="color"] .projects {
     --text: var(--black);
     --background: var(--teal);
     --accent:  var(--white);
+    --background-dark: var(--teal-dark);
+    --border: var(--teal-darker);
 } 
 [theme="color"] .journal {
     --text: var(--black);
     --background: var(--yellow);
     --accent:  var(--white);
+    --background-dark: var(--yellow-dark);
+    --border: var(--yellow-darker);
 } 
 [theme="color"] .knowledge {
     --text: var(--black);
     --background: var(--blue);
     --accent:  var(--white);
+    --background-dark: var(--blue-dark);
+    --border: var(--blue-darker);
 } 
 [theme="color"] .about {
     --text: var(--black);
     --background: var(--pink);
     --accent:  var(--white);
+    --background-dark: var(--pink-dark);
+    --border: var(--pink-darker);
 } 
 [theme="color"] .home {
     --text: var(--black);
     --background: var(--light-grey);
     --accent:  var(--white);
+    --background-dark: var(--middle-grey);
+    --border: var(--dark-grey);
 } 
 .portfolio, .projects, .journal, .knowledge, .about, .home {
     background-color: var(--background);
@@ -328,6 +367,10 @@ dl > dt {
 } 
 dl dd {
     padding-left:2em;
+} 
+fieldset {
+    border:none;
+    padding:0;
 } 
 .visually-hidden {
     clip: rect(0 0 0 0);
@@ -747,6 +790,109 @@ button:active {
 } 
 .color-button:hover svg {
     fill: var(--background);
+} 
+:root {
+     /* padding for form */
+    /* 30 is min, 50 is max */
+     --padding-form: calc(((30 / 16) * 1rem) + (50 - 30) * var(--fluid-bp));
+ 
+    /* Margin for input */
+    /* 30 is min, 50 is max */
+    --margin-input: calc(((30 / 16) * 1rem) + (50 - 30) * var(--fluid-bp));
+
+    /* Margin for label */
+    /* 5 is min, 10 is max */
+    --margin-label: calc(((5 / 16) * 1rem) + (10 - 5) * var(--fluid-bp));
+} 
+form {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--background-dark);
+    padding:var(--padding-form);
+} 
+form .error, form .hint {
+    color: var(--almost-black-grey);
+    font-weight: 500;
+} 
+form > *+* {
+    margin-top: var(--margin-input);
+} 
+form label {
+    margin-bottom: var(--margin-label);
+} 
+form .grouped {
+    display: flex;
+} 
+form .grouped > * {
+    margin-right: var(--margin-s);
+} 
+:root {
+    /* padding y for input */
+    /* 3 is min, 5 is max */
+    --padding-input-y: calc(((3 / 16) * 1rem) + (5 - 3) * var(--fluid-bp));
+
+     /* padding x for input */
+    /* 9 is min, 17 is max */
+     --padding-input-x: calc(((9 / 16) * 1rem) + (17 - 9) * var(--fluid-bp));
+} 
+input {
+    display: block;
+    color: var(--text);
+    background-color: var(--light-grey);
+    border: none;
+    border-radius: var(--radius-sm);
+    min-height: 42px;
+    padding: var(--padding-input-y) var(--padding-input-x);
+    outline: transparent;
+    width:1ch;
+} 
+input[data-size="30"] {
+    width:30ch;
+} 
+input[data-size="20"] {
+    width:20ch;
+} 
+input[data-size="10"] {
+    width:10ch;
+} 
+input[data-size="5"] {
+    width:5ch;
+} 
+input[data-size="4"] {
+    width:4ch;
+} 
+[theme="dark"] input {
+    background-color: var(--almost-black-grey);
+} 
+/* Focus styles */ 
+[theme="color"] input:focus {
+    box-shadow: var(--almost-black-grey) 0 0 0 2px;
+} 
+[theme="light"] input:focus {
+    box-shadow: var(--middle-grey) 0 0 0 2px;
+} 
+[theme="dark"] input:focus {
+    box-shadow: var(--dark-grey) 0 0 0 2px;
+} 
+label {
+    font-size: var(--base-font-size);
+    font-weight: 700;
+    display: block;
+    line-height: var(--base-line-height);
+} 
+label .required {
+    font-weight: 400;
+    font-style: italic;
+} 
+label[data-fake] {
+    font-weight: 400;
+
+} 
+legend {
+    font-size: var(--base-font-size);
+    font-weight: 700;
+    display: block;
+    line-height: var(--base-line-height);
 } 
 header {
     width: 100%;

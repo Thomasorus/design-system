@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/js/index.js"],
+  "sourcesContent": ["const allRequired = document.querySelectorAll(\"input[required]\")\n\nallRequired.forEach(el => {\n    const id = el.getAttribute('id');\n    const label = document.querySelector(`label[for=\"${id}\"`)\n    const text = `<span class=\"required\">&nbsp;(Required)</span>`\n    label.insertAdjacentHTML(\"beforeend\", text)\n});\n\nconst allAriaInvalid = document.querySelectorAll(`input[aria-invalid=\"true\"]`)\n\nallAriaInvalid.forEach(el => {\n    const id = el.getAttribute('id')\n    const errorId = id + \"-error\"\n    const infoID = id + \"-info\"\n    const errorMessage = document.querySelector(`div[id=\"${errorId}\"]`)\n    errorMessage.removeAttribute(\"hidden\")\n    const existingIds = el.getAttribute('aria-describedby')\n    el.setAttribute(\"aria-describedby\", existingIds + \" \" + errorId)\n\n});"],
+  "mappings": ";;AAAA,MAAM,cAAc,SAAS,iBAAiB;AAE9C,cAAY,QAAQ,QAAM;AACtB,UAAM,KAAK,GAAG,aAAa;AAC3B,UAAM,QAAQ,SAAS,cAAc,cAAc;AACnD,UAAM,OAAO;AACb,UAAM,mBAAmB,aAAa;AAAA;AAG1C,MAAM,iBAAiB,SAAS,iBAAiB;AAEjD,iBAAe,QAAQ,QAAM;AACzB,UAAM,KAAK,GAAG,aAAa;AAC3B,UAAM,UAAU,KAAK;AACrB,UAAM,SAAS,KAAK;AACpB,UAAM,eAAe,SAAS,cAAc,WAAW;AACvD,iBAAa,gBAAgB;AAC7B,UAAM,cAAc,GAAG,aAAa;AACpC,OAAG,aAAa,oBAAoB,cAAc,MAAM;AAAA;",
+  "names": []
+}
