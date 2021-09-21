@@ -66,3 +66,32 @@ button:active {
     background-color: var(--accent);
     cursor: pointer;
 }
+
+button[data-naked] {
+    outline: none;
+    border: none;
+    background:transparent;
+    box-shadow:none;
+    color:unset;
+    min-height: 0;
+    min-width: 0;
+    padding:0;
+    margin:0;
+    font-size: inherit;
+    font-weight: inherit;
+
+}
+
+button[data-naked]:hover {
+    outline: none;
+    border: none;
+    background:transparent;
+    box-shadow:none;
+    color:unset;
+    min-height: 0;
+    min-width: 0;
+    padding:0;
+    margin:0;
+    font-size: inherit;
+    font-weight: inherit;
+}
