@@ -1,7 +1,7 @@
 :root {
     /* padding y for select */
     /* 3 is min, 5 is max */
-    --padding-select-y: calc(((9 / 10) * 1rem) + (5 - 3) * var(--fluid-bp));
+    --padding-select-y: calc(((3 / 16) * 1rem) + (5 - 3) * var(--fluid-bp));
 
      /* padding x for select */
     /* 9 is min, 17 is max */
@@ -14,14 +14,14 @@ select {
     background-color: var(--light-grey);
     border: none;
     border-radius: var(--radius-sm);
-    min-height: 42px;
+    height: 42px;
     padding: var(--padding-select-y) var(--padding-select-x);
     outline: transparent;
     width:4ch;
 }
 
 option {
-    min-height: 42px;
+    height: 42px;
 }
 
 select[data-size="30"] {
