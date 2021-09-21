@@ -1,9 +1,9 @@
 header {
     width: 100%;
     background:var(--background);
-    padding: var(--margin-s);
+    padding: var(--margin-l);
     display:flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap:var(--base-font-size);
+    gap:var(--margin-s);
 }

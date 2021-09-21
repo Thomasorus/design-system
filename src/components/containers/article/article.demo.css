@@ -1,5 +1,5 @@
 article > *+* {
-    margin-top: var(--base-font-size);
+    margin-top: var(--margin-s);
     position: relative;
 }
 

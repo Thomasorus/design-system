@@ -1,6 +1,6 @@
 .nav--main {
     position:sticky;
-    top:var(--margin-s);
+    top:var(--margin-l);
 }
 
 .nav--main ul {

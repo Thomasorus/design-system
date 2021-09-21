@@ -1,7 +1,7 @@
 section[role="complementary"] {
     background-color: var(--accent);   
     width: 100%;
-    padding: 0.5em var(--margin-s);
+    padding: 0.5em var(--margin-l);
     min-width: 100%;
     position: sticky;
     bottom: 0;
@@ -12,7 +12,7 @@ section[role="complementary"] details {
     display:flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: var(--margin-s);
+    gap: var(--margin-l);
     cursor: pointer;
     justify-items:end;
 }
@@ -34,7 +34,7 @@ section[role="complementary"] summary::-webkit-details-marker {
 }
 
 .time-row-more {
-    margin-top: var(--margin-s);
+    margin-top: var(--margin-l);
     min-width: 100%;
     display:grid;
     grid-template-columns: 1fr auto;

@@ -45,5 +45,5 @@ form .grouped {
 }
 
 form .grouped > * {
-    margin-right: var(--margin-s);
+    margin-right: var(--margin-l);
 }
