@@ -41,11 +41,15 @@ input[data-size="4"] {
     width:4ch;
 }
 
-
+input[aria-invalid="true"] {
+    background-color: var(--border);
+}
 
 [theme="dark"] input {
     background-color: var(--almost-black-grey);
 }
+
+
 
 /* Focus styles */
 

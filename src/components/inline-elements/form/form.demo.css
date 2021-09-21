@@ -21,7 +21,14 @@ form {
 
 form .error, form .hint {
     color: var(--almost-black-grey);
-    font-weight: 500;
+}
+
+form .hint {
+    font-style: italic;
+}
+
+form .error {
+    font-weight: 600;
 }
 
 
