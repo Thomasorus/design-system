@@ -12,28 +12,16 @@
     --title-line-height-3: clamp(2.00rem, 1.72rem + 1.38vw, 2.96rem);
     --title-line-height-2: clamp(2.40rem, 2.02rem + 1.86vw, 3.70rem);
     --title-line-height-1: clamp(2.88rem, 2.38rem + 2.50vw, 4.63rem);
-
-    /* TITLES MARGINS SCALES */
-    --title-scale-5xs-min: (var(--title-scale-s-min) * 0.0625); 
-    --title-scale-5xs-max: (var(--title-scale-s-max) * 0.0625);
-    --title-scale-4xs-min: (var(--title-scale-s-min) * 0.125); 
-    --title-scale-4xs-max: (var(--title-scale-s-max) * 0.125);
-    --title-scale-3xs-min: (var(--title-scale-s-min) * 0.25); 
-    --title-scale-3xs-max: (var(--title-scale-s-max) * 0.25);
-    --title-scale-2xs-min: (var(--title-scale-s-min) * 0.5); 
-    --title-scale-2xs-max: (var(--title-scale-s-max) * 0.5);
-    --title-scale-xs-min: (var(--title-scale-s-min) * 0.75); 
-    --title-scale-xs-max: (var(--title-scale-s-max) * 0.75);
-    --title-scale-s-min: (var(--f-0-min, 70)); 
-    --title-scale-s-max: (var(--f-0-max, 100));
   
     /* TITLES MARGINS VARS */
-    --title-margin-6: calc(((var(--title-scale-5xs-min) / 16) * 1rem) + (var(--title-scale-5xs-max) - var(--title-scale-5xs-min)) * var(--fluid-bp));
-    --title-margin-5: calc(((var(--title-scale-4xs-min) / 16) * 1rem) + (var(--title-scale-4xs-max) - var(--title-scale-4xs-min)) * var(--fluid-bp));
-    --title-margin-4: calc(((var(--title-scale-3xs-min) / 16) * 1rem) + (var(--title-scale-3xs-max) - var(--title-scale-3xs-min)) * var(--fluid-bp));
-    --title-margin-3: calc(((var(--title-scale-2xs-min) / 16) * 1rem) + (var(--title-scale-2xs-max) - var(--title-scale-2xs-min)) * var(--fluid-bp));
-    --title-margin-2: calc(((var(--title-scale-xs-min) / 16) * 1rem) + (var(--title-scale-xs-max) - var(--title-scale-xs-min)) * var(--fluid-bp));
-    --title-margin-1: calc(((var(--title-scale-s-min) / 16) * 1rem) + (var(--title-scale-s-max) - var(--title-scale-s-min)) * var(--fluid-bp));
+    /* Minimum size for H1 is 70, maximum is 100 */
+    /* Multiply the max by the scale of 0.25 to get subsequent sizes : 100 > 0.75. > 0.5 > 0.25 > 0.125 > 0.0625 */
+    --title-margin-6: calc(((4.375 / 16) * 1rem) + (6.25 - 4.375) * var(--fluid-bp));
+    --title-margin-5: calc(((8.75 / 16) * 1rem) + (12.5 - 8.75) * var(--fluid-bp));
+    --title-margin-4: calc(((17.5 / 16) * 1rem) + (25 - 17.5) * var(--fluid-bp));
+    --title-margin-3: calc(((25 / 16) * 1rem) + (50 - 25) * var(--fluid-bp));
+    --title-margin-2: calc(((52.5 / 16) * 1rem) + (75 - 52.5) * var(--fluid-bp));
+    --title-margin-1: calc(((70 / 16) * 1rem) + (100 - 70) * var(--fluid-bp));
 }
 
 h6 {
