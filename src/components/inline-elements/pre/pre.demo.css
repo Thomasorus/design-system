@@ -1,27 +1,22 @@
-pre {
-    background-color:var(--accent);
-    overflow-x: auto;
-    border-radius: var(--radius-sm);
-    scrollbar-color: var(--background) var(--accent);
-    padding:10px;
-    max-width: 60ch;
-    margin: var(--title-margin-3) 0!important;
+:root {
+    /* spacing y for input, 27 is min, 35 is max */
+    --spacing-pre-y: calc(((27 / 16) * 1rem) + (35 - 27) * var(--fluid-bp));
+
+     /* spacing x for input,  15 is min, 42 is max */
+     --spacing-pre-x: calc(((15 / 16) * 1rem) + (42 - 15) * var(--fluid-bp));
 }
 
-[theme="color"] pre {
-    --text: var(--white);
-    --accent: var(--black);
+pre {
+    background-color:var(--background-dark);
+    color: var(--text);
+    overflow-x: auto;
+    border-radius: var(--radius-sm);
+    scrollbar-color: var(--accent) var(--background-dark);
+    padding: var(--spacing-pre-y) var(--spacing-pre-x);
+    margin:0;
+    line-height: 1;
 }
 
 [theme="light"] pre {
-    --text: var(--black);
-    --accent: var(--grey);
-    --background: var(--grey-darker);
+    scrollbar-color: var(--background) var(--accent);
 }
-
-[theme="dark"] pre {
-    --text: var(--white);
-    --accent: var(--grey-darker);
-    --background: var(--grey);
-}
-
