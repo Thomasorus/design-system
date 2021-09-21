@@ -2,46 +2,67 @@ button {
     min-height: 40px;
     min-width: 120px;
     max-width: 20ch;
-    border: 1px solid var(--text);
-    background-color: var(--background);
+    box-shadow:var(--text) 0 0 0 2px;
+    background-color: var(--text);
+    border:none;
     border-radius: var(--radius-sm);
     line-height: 1.5;
     font-weight: 700;
     padding:5px 19px;
-    color:var(--text);
+    color:var(--accent);
     transition: 0.25s;
 }
 
 button:hover {
-    color:var(--background);
-    border: 1px solid var(--background);
-    background-color: var(--text);
+    color:var(--text);
+    box-shadow:var(--text) 0 0 0 2px;
+    background-color: var(--background);
     cursor: pointer;
 }
 
 button:active {
     color:var(--text);
-    border: 1px solid var(--text);
+    box-shadow:var(--text) 0 0 0 2px;
+    background-color: var(--accent);
+    cursor: pointer;
+}
+
+
+[theme="light"] button {
+    color:var(--background);
+    box-shadow:var(--text) 0 0 0 2px;
+    border:none;
+}
+
+
+[theme="light"] button:hover {
+    color:var(--text);
+    box-shadow:var(--text) 0 0 0 2px;
+    background-color: var(--background);
+    cursor: pointer;
+}
+
+[theme="light"] button:active {
+    color:var(--text);
     background-color: var(--accent);
     cursor: pointer;
 }
 
 [theme="dark"] button {
-    color:var(--text);
-    border: 1px solid var(--text);
+    color:var(--background);
+    box-shadow:var(--text) 0 0 0 2px;
+    border:none;
 }
 
-
 [theme="dark"] button:hover {
-    color:var(--background);
-    border: 1px solid var(--background);
-    background-color: var(--text);
+    color:var(--text);
+    box-shadow:var(--text) 0 0 0 2px;
+    background-color: var(--background);
     cursor: pointer;
 }
 
 [theme="dark"] button:active {
     color:var(--background);
-    border: 1px solid var(--text);
     background-color: var(--accent);
     cursor: pointer;
 }
