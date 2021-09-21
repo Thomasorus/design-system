@@ -1,102 +1,27 @@
 :root {
     --text: var(--black);
     --background: var(--white);
-    --accent:  var(--black);
-    --background-dark: var(--white);
-    --border: var(--middle-grey);
+    --accent:  var(--grey);
+    --background-dark: var(--grey-pitchblack);
+    --border: var(--grey-dark);
 }
 
 
-[theme="light"] .portfolio {
+[theme="light"] {
     --text: var(--black);
     --background: var(--white);
-    --accent:  var(--red);
+    --accent: var(--grey);
     --background-dark: var(--white);
-    --border: var(--middle-grey);
-}
-[theme="light"] .projects {
-    --text: var(--black);
-    --background: var(--white);
-    --accent:  var(--teal);
-    --background-dark: var(--white);
-    --border: var(--middle-grey);
-}
-[theme="light"] .journal {
-    --text: var(--black);
-    --background: var(--white);
-    --accent:  var(--yellow);
-    --background-dark: var(--white);
-    --border: var(--middle-grey);
-}
-[theme="light"] .knowledge {
-    --text: var(--black);
-    --background: var(--white);
-    --accent:  var(--blue);
-    --background-dark: var(--white);
-    --border: var(--middle-grey);
-}
-[theme="light"] .about {
-    --text: var(--black);
-    --background: var(--white);
-    --accent:  var(--pink);
-    --background-dark: var(--white);
-    --border: var(--middle-grey);
-}
-[theme="light"] .home {
-    --text: var(--black);
-    --background: var(--white);
-    --accent:  var(--light);
-    --background-dark: var(--white);
-    --border: var(--middle-grey);
+    --border: var(--grey-dark);
 }
 
-
-
-[theme="dark"] .portfolio {
+[theme="dark"]{
     --text: var(--white);
     --background: var(--black);
-    --accent:  var(--red);
-    --background-dark: var(--black);
-    --border: var(--dark-grey);
+    --accent:  var(--grey);
+    --background-dark: var(--grey-pitchblack);
+    --border: var(--grey-darker);
 }
-
-[theme="dark"] .projects {
-    --text: var(--white);
-    --background: var(--black);
-    --accent:  var(--teal);
-    --background-dark: var(--black);
-    --border: var(--dark-grey);
-}
-[theme="dark"] .journal {
-    --text: var(--white);
-    --background: var(--black);
-    --accent:  var(--yellow);
-    --background-dark: var(--black);
-    --border: var(--dark-grey);
-}
-[theme="dark"] .knowledge {
-    --text: var(--white);
-    --background: var(--black);
-    --accent:  var(--blue);
-    --background-dark: var(--black);
-    --border: var(--dark-grey);
-}
-[theme="dark"] .about {
-    --text: var(--white);
-    --background: var(--black);
-    --accent:  var(--pink);
-    --background-dark: var(--black);
-    --border: var(--dark-grey);
-}
-[theme="dark"] .home {
-    --text: var(--white);
-    --background: var(--black);
-    --accent:  var(--light-grey);
-    --background-dark: var(--black);
-    --border: var(--dark-grey);
-}
-
-
 
 
 [theme="color"] .portfolio {
@@ -140,10 +65,10 @@
 }
 [theme="color"] .home {
     --text: var(--black);
-    --background: var(--light-grey);
+    --background: var(--grey);
     --accent:  var(--white);
-    --background-dark: var(--middle-grey);
-    --border: var(--dark-grey);
+    --background-dark: var(--grey-dark);
+    --border: var(--grey-darker);
 }
 
 
@@ -151,4 +76,5 @@
 .portfolio, .projects, .journal, .knowledge, .about, .home {
     background-color: var(--background);
     color: var(--text);
+    
 }
