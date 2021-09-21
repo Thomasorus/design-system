@@ -1,5 +1,5 @@
 button {
-    min-height: 40px;
+    min-height: 44px;
     min-width: 120px;
     max-width: 20ch;
     box-shadow:var(--text) 0 0 0 2px;
