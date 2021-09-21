@@ -1,9 +1,19 @@
 
+:root {
+
+    /* Blockqupote padding x : min 15, max 42 */
+    --blockquote-padding-x: calc(((15 / 16) * 1rem) + (42 - 15) * var(--fluid-bp));
+  
+    /* Blockqupote padding y : min 23, max 36 */
+    --blockquote-padding-y: calc(((23 / 16) * 1rem) + (36 - 23) * var(--fluid-bp));
+  
+}
+
 blockquote {
-    padding:var(--blockquote-padding-y) var(--blockquote-padding-x) 0 var(--blockquote-padding-x);
+    padding:var(--blockquote-padding-y) var(--blockquote-padding-x);
 }
 blockquote + figcaption {
-    padding:var(--base-font-size) var(--blockquote-padding-y) var(--blockquote-padding-x) var(--blockquote-padding-x);
+    padding: 0 var(--blockquote-padding-y) var(--blockquote-padding-x) var(--blockquote-padding-x);
 }
 
 
@@ -25,18 +35,3 @@ blockquote + figcaption {
     border-left: 5px solid var(--accent);
 }
 
-
-:root {
-    --blockquote-padding-x-s-min: (var(--f-0-min, 15)); 
-    --blockquote-padding-x-s-max: (var(--f-0-max, 42));
-
-    /* T-shirt sizes */
-    --blockquote-padding-x: calc(((var(--blockquote-padding-x-s-min) / 16) * 1rem) + (var(--blockquote-padding-x-s-max) - var(--blockquote-padding-x-s-min)) * var(--fluid-bp));
-
-    --blockquote-padding-y-s-min: (var(--f-0-min, 23)); 
-    --blockquote-padding-y-s-max: (var(--f-0-max, 36));
-  
-    /* T-shirt sizes */
-    --blockquote-padding-y: calc(((var(--blockquote-padding-y-s-min) / 16) * 1rem) + (var(--blockquote-padding-y-s-max) - var(--blockquote-padding-y-s-min)) * var(--fluid-bp));
-  
-}
