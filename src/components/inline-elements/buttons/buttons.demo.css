@@ -67,6 +67,18 @@ button:active {
     cursor: pointer;
 }
 
+button[data-secondary] {
+    box-shadow:var(--text) 0 0 0 2px;
+    background-color: var(--background);
+    color:var(--text);
+}
+
+button[data-small] {
+    min-height: 24px;
+    padding:3px 10px;
+    font-weight: 400;
+}
+
 button[data-naked] {
     outline: none;
     border: none;
@@ -94,4 +106,10 @@ button[data-naked]:hover {
     margin:0;
     font-size: inherit;
     font-weight: inherit;
+}
+
+button:focus-visible {
+    background-color: var(--focus);
+    color: var(--accent);
+    box-shadow:var(--text) 0 0 0 2px;
 }
