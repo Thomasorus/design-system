@@ -4,27 +4,27 @@
     --white: hsla(0, 0%, 100%, 1);
 
     --light-grey: hsla(0, 0%, 93%, 1);
-    --middle-grey: hsla(0, 0%, 7%, 0.5);
-    --dark-grey: hsla(0, 0%, 13%, 1);
+    --middle-grey: hsla(0, 0%, 67%, 1);
+    --dark-grey: hsla(0, 0%, 33%, 1);
 
     --focus: hsla(0, 0%, 40%, 1);
 
-    /* Pastel colors */
-    /* --yellow: hsla(50, 95%, 68%, 1);
-    --teal: hsla(147, 41%, 75%, 1);
-    --pink: hsla(340, 80%, 90%, 1);
-    --blue: hsla(245, 38%, 83%, 1);
-    --red: hsla(13, 78%, 69%, 1); */
-
     /* Original colors */
-    --yellow: hsla(50, 100%, 50%, 1);
-    --teal: hsla(147, 48%, 68%, 1);
-    --purple: hsla(263, 20%, 20%, 1);
-    --pink: hsla(340, 80%, 90%, 1);
-    /* --blue: hsla(246, 71%, 55%, 1); */
-    /* --red: hsla(13, 100%, 43%, 1); */
+    --yellow: hsla(50, 88%, 58%, 1);
+    --yellow-dark: hsla(50, 73%, 53%, 1);
+    --yellow-darker: hsl(50,66%,36%, 1);
+    --teal: hsla(147, 75%, 68%, 1);
+    --teal-dark: hsla(147, 49%, 58%, 1);
+    --teal-darker: hsl(146,38%,45%, 1);
+    --pink: hsla(340, 100%, 84%, 1);
+    --pink-dark: hsla(340, 100%, 76%, 1);
+    --pink-darker: hsla(340, 71%, 49%, 1);
 
     /* Temp colors */
-    --red: hsla(9, 70%, 57%, 1);
-    --blue:hsla(198, 71%, 55%, 1);
+    --red: hsla(14, 88%, 62%, 1);
+    --red-dark: hsla(14, 71%, 54%, 1);
+    --red-darker: hsla(14, 83%, 43%, 1);
+    --blue:hsla(238, 98%, 78%, 1);
+    --blue-dark: hsla(238, 79%, 70%, 1);
+    --blue-darker: hsla(237, 63%, 60%, 1);
 }
