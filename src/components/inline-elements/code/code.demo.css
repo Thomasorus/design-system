@@ -1,5 +1,5 @@
 code {
     font-family: "IBM Plex Mono", monospace;
     color:var(--text);
-    font-size: var(--base-font-size);
+    font-size: inherit;
 }
