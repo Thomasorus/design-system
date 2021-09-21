@@ -1,6 +1,6 @@
 :root {
-    /* Base font size, min: 16px, max: 20px */
-    --base-font-size: calc(((16 / 16) * 1rem) + (20 - 16) * var(--fluid-bp));
+    /* Base font size, min: 16px, max: 18px */
+    --base-font-size: calc(((16 / 16) * 1rem) + (18 - 16) * var(--fluid-bp));
 
     /* Base line height, min: 24, max: 30*/
     --base-line-height: calc(((24 / 16) * 1rem) + (30 - 24) * var(--fluid-bp));
