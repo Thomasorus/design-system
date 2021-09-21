@@ -11,3 +11,6 @@
 @import "../components/inline-elements/buttons/buttons.demo.css";
 @import "../components/inline-elements/color-button/color-button.demo.css";
 @import "../components/inline-elements/form/form.demo.css";
+@import "../components/inline-elements/input/input.demo.css";
+@import "../components/inline-elements/label/label.demo.css";
+@import "../components/inline-elements/legend/legend.demo.css";
