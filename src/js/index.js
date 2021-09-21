@@ -24,8 +24,15 @@ allAriaInvalid.forEach(el => {
 const triggers = document.querySelectorAll('.collapse [data-trigger="true"]');
 triggers.forEach(el => {
     const tagName = el.tagName
+    const dataAttributes = el.dataset
+    let attrString = ""
+    Object.keys(dataAttributes).map(key => {
+        if (key !== "trigger") {
+            attrString += ` data-${key} `
+        }
+    });
     el.innerHTML = `
-    <button data-naked="true" aria-expanded="false">${el.textContent} &#43; </button>`;
+    <button aria-expanded="false" ${attrString}>${el.textContent} &#43; </button>`;
     const getContent = (elem) => {
         let elems = [];
         //Put siblings inside an array if they don't are a data trigger
