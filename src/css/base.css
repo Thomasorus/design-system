@@ -28,7 +28,10 @@ header,
 nav,
 main,
 article,
-footer {
+footer
+form,
+input,
+label {
 max-width: none;
 }
 /* 
