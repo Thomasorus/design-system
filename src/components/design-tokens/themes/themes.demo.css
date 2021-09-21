@@ -11,7 +11,7 @@
     --text: var(--black);
     --background: var(--white);
     --accent: var(--grey);
-    --background-dark: var(--white);
+    --background-dark: var(--grey);
     --border: var(--grey-dark);
 }
 
