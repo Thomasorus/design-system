@@ -807,7 +807,6 @@ button:active {
     --margin-label: calc(((5 / 16) * 1rem) + (10 - 5) * var(--fluid-bp));
 } 
 form {
-    max-width: 60ch;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     background-color: var(--background-dark);
