@@ -1,4 +1,12 @@
 :root {
+     /* GLOBAL SCALES */
+     --fluid-min-width: 320;
+     --fluid-max-width: 1440;
+   
+     /* FLUID SCALES */
+     --fluid-screen: 100vw;
+     --fluid-bp: calc((var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width)));
+
     /* Base font size, min: 16px, max: 18px */
     --base-font-size: calc(((16 / 16) * 1rem) + (18 - 16) * var(--fluid-bp));
 
