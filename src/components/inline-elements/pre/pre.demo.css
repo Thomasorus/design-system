@@ -15,13 +15,13 @@ pre {
 
 [theme="light"] pre {
     --text: var(--black);
-    --accent: var(--light-grey);
-    --background: var(--dark-grey);
+    --accent: var(--grey);
+    --background: var(--grey-darker);
 }
 
 [theme="dark"] pre {
     --text: var(--white);
-    --accent: var(--dark-grey);
-    --background: var(--light-grey);
+    --accent: var(--grey-darker);
+    --background: var(--grey);
 }
 

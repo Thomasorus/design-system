@@ -11,7 +11,7 @@
 select {
     display: block;
     color: var(--text);
-    background-color: var(--light-grey);
+    background-color: var(--grey);
     border: none;
     border-radius: var(--radius-sm);
     height: 42px;
@@ -48,19 +48,19 @@ select[data-size="4"] {
 
 
 [theme="dark"] select {
-    background-color: var(--almost-black-grey);
+    background-color: var(grey-pitchblack);
 }
 
 /* Focus styles */
 
 [theme="color"] select:focus {
-    box-shadow: var(--almost-black-grey) 0 0 0 2px;
+    box-shadow: var(grey-pitchblack) 0 0 0 2px;
 }
 
 [theme="light"] select:focus {
-    box-shadow: var(--middle-grey) 0 0 0 2px;
+    box-shadow: var(--grey-dark) 0 0 0 2px;
 }
 
 [theme="dark"] select:focus {
-    box-shadow: var(--dark-grey) 0 0 0 2px;
+    box-shadow: var(--grey-darker) 0 0 0 2px;
 }

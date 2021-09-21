@@ -25,13 +25,13 @@ blockquote + figcaption {
 
 [theme="light"] blockquote,
 [theme="light"] blockquote + figcaption {
-    background-color:var(--light-grey);
-    border-left: 5px solid var(--accent);
+    background-color:var(--grey);
+    border-left: 5px solid var(--border);
 }
 
 [theme="dark"] blockquote,
 [theme="dark"] blockquote + figcaption {
-    background-color:var(--dark-grey);
-    border-left: 5px solid var(--accent);
+    background-color:var(--background-dark);
+    border-left: 5px solid var(--border);
 }
 

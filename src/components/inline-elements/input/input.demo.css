@@ -11,7 +11,7 @@
 input {
     display: block;
     color: var(--text);
-    background-color: var(--light-grey);
+    background-color: var(--grey);
     border: none;
     border-radius: var(--radius-sm);
     min-height: 42px;
@@ -46,7 +46,7 @@ input[aria-invalid="true"] {
 }
 
 [theme="dark"] input {
-    background-color: var(--almost-black-grey);
+    background-color: var(grey-pitchblack);
 }
 
 
@@ -54,13 +54,13 @@ input[aria-invalid="true"] {
 /* Focus styles */
 
 [theme="color"] input:focus {
-    box-shadow: var(--almost-black-grey) 0 0 0 2px;
+    box-shadow: var(grey-pitchblack) 0 0 0 2px;
 }
 
 [theme="light"] input:focus {
-    box-shadow: var(--middle-grey) 0 0 0 2px;
+    box-shadow: var(--grey-dark) 0 0 0 2px;
 }
 
 [theme="dark"] input:focus {
-    box-shadow: var(--dark-grey) 0 0 0 2px;
+    box-shadow: var(--grey-darker) 0 0 0 2px;
 }

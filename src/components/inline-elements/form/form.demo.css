@@ -20,7 +20,7 @@ form {
 }
 
 form .error, form .hint {
-    color: var(--almost-black-grey);
+    color: var(grey-pitchblack);
 }
 
 form .hint {
