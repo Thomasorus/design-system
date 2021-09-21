@@ -3,9 +3,10 @@
     --black: hsla(0, 0%, 7%, 1);
     --white: hsla(0, 0%, 100%, 1);
 
-    --light-grey: hsla(0, 0%, 93%, 1);
-    --middle-grey: hsla(0, 0%, 67%, 1);
-    --dark-grey: hsla(0, 0%, 33%, 1);
+    --light-grey: hsla(0, 0%, 93%, 1); /* EEE */
+    --middle-grey: hsla(0, 0%, 67%, 1); /* AAA */
+    --dark-grey: hsla(0, 0%, 33%, 1); /* 555 */
+    --almost-black-grey: hsla(0, 0%, 13%, 1); /* 222 */
 
     --focus: hsla(0, 0%, 40%, 1);
 
