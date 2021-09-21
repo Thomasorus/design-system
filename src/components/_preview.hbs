@@ -9,64 +9,36 @@
 </head>
 
 <body>
-	<code>Color theme</code>
-	<div theme="color">
-		<div class="portfolio">
-			{{{ yield }}}
-		</div>
-		<div class="projects">
-			{{{ yield }}}
-		</div>
-		<div class="journal">
-			{{{ yield }}}
-		</div>
+	<main>
+		<article>
+			<div theme="color">
+				<div class="portfolio">
+					{{{ yield }}}
+				</div>
+				<div class="projects">
+					{{{ yield }}}
+				</div>
+				<div class="journal">
+					{{{ yield }}}
+				</div>
 
-		<div class="knowledge">
-			{{{ yield }}}
-		</div>
-		<div class="about">
-			{{{ yield }}}
-		</div>
-	</div>
-	<br>
-	<code>Light theme</code>
-	<div theme="light">
-		<div class="portfolio">
-			{{{ yield }}}
-		</div>
-		<div class="projects">
-			{{{ yield }}}
-		</div>
-		<div class="journal">
-			{{{ yield }}}
-		</div>
+				<div class="knowledge">
+					{{{ yield }}}
+				</div>
+				<div class="about">
+					{{{ yield }}}
+				</div>
+			</div>
 
-		<div class="knowledge">
-			{{{ yield }}}
-		</div>
-		<div class="about">
-			{{{ yield }}}
-		</div>
-	</div>
-	<br>
-	<code>Dark theme</code>
-	<div theme="dark">
-		<div class="portfolio">
-			{{{ yield }}}
-		</div>
-		<div class="projects">
-			{{{ yield }}}
-		</div>
-		<div class="journal">
-			{{{ yield }}}
-		</div>
-		<div class="knowledge">
-			{{{ yield }}}
-		</div>
-		<div class="about">
-			{{{ yield }}}
-		</div>
-	</div>
+			<div theme="light" class="projects">
+					{{{ yield }}}
+			</div>
+
+			<div theme="dark" class="projects">
+					{{{ yield }}}
+			</div>
+		</article>
+	</main>
 
 	<script src="{{ path '/js/index.js' }}"></script>
 </body>
