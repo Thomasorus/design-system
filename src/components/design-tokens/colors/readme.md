@@ -12,16 +12,7 @@ Colors are used for specific content of pages in correlation with black and whit
 
 Colors are defined as custom elements in CSS.
 
-```
-    --black: hsla(0, 0%, 7%, 1);
-    --white: hsla(0, 0%, 100%, 1);
-    --yellow: hsla(50, 100%, 50%, 1);
-    --teal: hsla(147, 48%, 68%, 1);
-    --purple: hsla(263, 20%, 20%, 1);
-    --pink: hsla(340, 80%, 90%, 1);
-    --blue: hsla(246, 71%, 55%, 1);
-    --red: hsla(13, 100%, 43%, 1);
-```
+List of colors: https://accessiblepalette.com/?lightness=97,93,85,79,63,54,48,32,14,8&db3000=0,-8&ffd500=0,-6&86d5a9=0,0&4b3bde=0,0&ffadc9=0,0&808080=0,0
 
 ## Do
 
