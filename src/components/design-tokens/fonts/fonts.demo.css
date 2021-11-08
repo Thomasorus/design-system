@@ -78,24 +78,81 @@
 }
 
 
+@font-face {
+  font-family: 'Atkinson Regular';
+  src: url("../../../css/fonts/Atkinson-Hyperlegible-Regular-102a.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Bold';
+  src: url('../../../css/fonts/Atkinson-Hyperlegible-Bold-102a.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Italic';
+  src: url('../../../css/fonts/Atkinson-Hyperlegible-Italic-102a.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Bold Italic';
+  src: url('../../../css/fonts/Atkinson-Hyperlegible-BoldItalic-102a.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Mono';
+  src: url('../../../css/fonts/Atkinson-Hyperlegible-Regular-102a.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 html { font-family: 'Inter', sans-serif; }
-html[dislexia] * { font-family: 'OpenDyslexic Regular', sans-serif; }
+html[font-style="dislexia"] * { font-family: 'OpenDyslexic Regular', sans-serif; }
+html[font-style="atkinson"] * { font-family: 'Atkinson Regular', sans-serif; }
 
 @supports (font-variation-settings: normal) {
     html { font-family: 'Inter var', sans-serif; }
 }
 
-html[dislexia] b, html[dislexia] strong{
+/* Open Dyslexic */
+
+html[font-style="dislexia"] b, html[font-style="dislexia"] strong{
   font-family: 'OpenDyslexic Bold';
 }
 
-html[dislexia] i, html[dislexia] em {
+html[font-style="dislexia"] i, html[dislexia] em {
   font-family: 'OpenDyslexic Italic';
 }
 
-html[dislexia] code {
+html[font-style="dislexia"] code {
   font-family: 'OpenDyslexicMono';
+}
+
+
+/* Atkinson */
+
+html[font-style="atkinson"] b, html[font-style="atkinson"] strong{
+  font-family: 'Atkinson Bold';
+}
+
+html[font-style="atkinson"] i, html[dislexia] em {
+  font-family: 'Atkinson Italic';
+}
+
+html[font-style="atkinson"] code {
+  font-family: 'Atkinson Mono';
 }
 

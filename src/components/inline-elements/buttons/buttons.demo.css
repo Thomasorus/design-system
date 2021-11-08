@@ -27,6 +27,10 @@ button:active {
     cursor: pointer;
 }
 
+button svg {
+    fill:var(--text);
+    margin-top: 4px;
+}
 
 [theme="light"] button {
     color:var(--background);
@@ -75,6 +79,7 @@ button[data-secondary] {
 
 button[data-small] {
     min-height: 24px;
+    min-width:unset;
     padding:3px 10px;
     font-weight: 400;
 }

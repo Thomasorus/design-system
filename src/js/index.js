@@ -32,7 +32,7 @@ triggers.forEach(el => {
         }
     });
     el.innerHTML = `
-    <button aria-expanded="false" ${attrString}>${el.textContent} &#43; </button>`;
+    <button aria-expanded="false" ${attrString}>${el.textContent}</button>`;
     const getContent = (elem) => {
         let elems = [];
         //Put siblings inside an array if they don't are a data trigger
@@ -50,7 +50,7 @@ triggers.forEach(el => {
 
     let wrapper = document.createElement('div');
     wrapper.hidden = true;
-    wrapper.setAttribute("class", "flow")
+    wrapper.setAttribute("class", "flow accessibility-menu")
 
     // Add each element of `contents` to `wrapper`
     contents.forEach(node => {
@@ -72,3 +72,52 @@ triggers.forEach(el => {
         wrapper.hidden = expanded;
     }
 })
+
+
+function changeFont(el) {
+    const font = el.dataset.font;
+    let html = document.querySelector("html")
+    if (font === "inter") {
+        html.setAttribute('font-style', "")
+    } else {
+        html.setAttribute('font-style', font)
+    }
+}
+
+function changeFontSize(el) {
+    const action = el.dataset.resize;
+    console.log(action)
+    let root = document.querySelector("html"),
+        style = window.getComputedStyle(root, null).getPropertyValue('font-size'),
+        fontSize = parseFloat(style);
+    if (action === "+") {
+        root.style.fontSize = (fontSize * 1.25) + "px";
+    } else {
+        root.style.fontSize = (fontSize / 1.25) + "px";
+    }
+}
+
+function setThemeFromLocalStorage() {
+    const value = localStorage.getItem("theme");
+    if (value == "light") {
+        document.documentElement.setAttribute('theme', 'light');
+        localStorage.setItem("theme", "light");
+    }
+    if (value == "dark") {
+        document.documentElement.setAttribute('theme', 'dark');
+        localStorage.setItem("theme", "dark");
+    }
+
+}
+
+function changeColors(el) {
+    const html = document.querySelector("html")
+    const currentTheme = html.getAttribute('theme')
+    const newTheme = el.getAttribute("id")
+    html.setAttribute("theme", newTheme)
+    localStorage.setItem("theme", newTheme);
+}
+
+(function () {
+    setThemeFromLocalStorage()
+})();

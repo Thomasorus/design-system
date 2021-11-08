@@ -217,28 +217,28 @@ select {
 } 
 @font-face {
   font-family: 'OpenDyslexic Regular';
-  src: url("09def7413d3fd46f.woff2") format('woff2');
+  src: url("957dea8070ab97fc.woff2") format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 } 
 @font-face {
   font-family: 'OpenDyslexic Bold';
-  src: url('eaf374f1823293ff.woff2') format('woff2');
+  src: url('36be0d44d1761708.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 } 
 @font-face {
   font-family: 'OpenDyslexic Italic';
-  src: url('f3423189d1d38121.woff2') format('woff2');
+  src: url('042bfefbe95e634e.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 } 
 @font-face {
   font-family: 'OpenDyslexic';
-  src: url('c5bf831fd20ea79d.woff2') format('woff2');
+  src: url('24c5b6d4e04b40f5.woff2') format('woff2');
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -250,19 +250,66 @@ select {
   font-style: normal;
   font-display: swap;
 } 
+@font-face {
+  font-family: 'Atkinson Regular';
+  src: url("8a959bfe84a666f4.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'Atkinson Bold';
+  src: url('a7afb2a2cca79576.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'Atkinson Italic';
+  src: url('e416efa9c1fdd783.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'Atkinson Bold Italic';
+  src: url('264e18781432e05c.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'Atkinson Mono';
+  src: url('8a959bfe84a666f4.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 
 html { font-family: 'Inter', sans-serif; } 
-html[dislexia] * { font-family: 'OpenDyslexic Regular', sans-serif; } 
+html[font-style="dislexia"] * { font-family: 'OpenDyslexic Regular', sans-serif; } 
+html[font-style="atkinson"] * { font-family: 'Atkinson Regular', sans-serif; } 
 @supports (font-variation-settings: normal) {
     html { font-family: 'Inter var', sans-serif; }
 } 
-html[dislexia] b, html[dislexia] strong{
+/* Open Dyslexic */ 
+html[font-style="dislexia"] b, html[font-style="dislexia"] strong{
   font-family: 'OpenDyslexic Bold';
 } 
-html[dislexia] i, html[dislexia] em {
+html[font-style="dislexia"] i, html[dislexia] em {
   font-family: 'OpenDyslexic Italic';
 } 
-html[dislexia] code {
+html[font-style="dislexia"] code {
   font-family: 'OpenDyslexicMono';
+} 
+/* Atkinson */ 
+html[font-style="atkinson"] b, html[font-style="atkinson"] strong{
+  font-family: 'Atkinson Bold';
+} 
+html[font-style="atkinson"] i, html[dislexia] em {
+  font-family: 'Atkinson Italic';
+} 
+html[font-style="atkinson"] code {
+  font-family: 'Atkinson Mono';
 } 
 :root {
     --radius-sm: 5px;
@@ -601,6 +648,10 @@ button:active {
     background-color: var(--accent);
     cursor: pointer;
 } 
+button svg {
+    fill:var(--text);
+    margin-top: 4px;
+} 
 [theme="light"] button {
     color:var(--background);
     box-shadow:var(--text) 0 0 0 2px;
@@ -640,6 +691,7 @@ button[data-secondary] {
 } 
 button[data-small] {
     min-height: 24px;
+    min-width:unset;
     padding:3px 10px;
     font-weight: 400;
 } 
@@ -863,6 +915,20 @@ select[data-size="4"] {
 [theme="dark"] select:focus {
     box-shadow: var(--grey-darker) 0 0 0 2px;
 } 
+table {
+    width:100%;
+    text-align: left;
+    padding: var(--margin-s);
+    border: 2px solid var(--text);
+} 
+table caption {
+    text-align: left;
+    font-family: "Editorial New Regular", serif;
+    font-weight: 400;
+} 
+tbody > *, thead > *  {
+    box-shadow: 0 2px 0 var(--text);
+} 
 header {
     width: 100%;
     background:var(--background);
@@ -904,6 +970,7 @@ section[role="complementary"] {
     min-width: 100%;
     position: sticky;
     bottom: 0;
+    z-index: 2;
 } 
 section[role="complementary"] details {
     min-width: 100%;
@@ -923,22 +990,37 @@ section[role="complementary"] summary::-webkit-details-marker {
     grid-template-columns: 1fr auto;
     gap:0.6em;
 } 
+section[role="complementary"] details > *+* {
+    margin-top: var(--margin-l);
+
+} 
 .time-row__title {
     font-family: "Editorial New Regular", serif;
 } 
+details[open] .time-row__second {
+    display: none;
+} 
 .time-row-more {
-    margin-top: var(--margin-l);
     min-width: 100%;
     display:grid;
-    grid-template-columns: 1fr auto;
-    text-align: right;
-    justify-items:end;
+    grid-template-columns: auto 1fr;
+    text-align: left;
+    justify-items: start;
     gap:0.6em;
 } 
 .time-row-more dt,
 .time-row-more dd {
     margin:0;
     padding:0;
+} 
+.time-row-more dt {
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+} 
+.time-row-more dt span {
+    margin-left: var(--margin-s);
+
 } 
 @media screen and (max-width:640px) {
     section[role="complementary"] {
@@ -965,6 +1047,7 @@ section[role="complementary"] summary::-webkit-details-marker {
     display:flex;
     flex-flow: row wrap;
     justify-content:flex-end;
+    align-items: center;
     gap: 5px 20px;
 } 
 .nav--main a {
@@ -1007,6 +1090,19 @@ nav[role="breadcrumb"] {
 } 
 [theme="dark"] nav[role="breadcrumb"] {
     color:var(--accent);
+} 
+.accessibility-menu {
+    background-color: var(--background);
+    position: absolute;
+    transform: translateX(-100%);
+    padding:var(--margin-s);
+    min-width: 280px;
+    margin-left: 35px;
+    margin-top: 2px;
+} 
+.accessibility-menu div button {
+    display: block;
+    margin-top:10px;
 } 
 .flow > *+* {
     margin-top: var(--margin-s);

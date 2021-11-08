@@ -1,0 +1,16 @@
+table {
+    width:100%;
+    text-align: left;
+    padding: var(--margin-s);
+    border: 2px solid var(--text);
+}
+
+table caption {
+    text-align: left;
+    font-family: "Editorial New Regular", serif;
+    font-weight: 400;
+}
+
+tbody > *, thead > *  {
+    box-shadow: 0 2px 0 var(--text);
+}

@@ -1,0 +1,14 @@
+.accessibility-menu {
+    background-color: var(--background);
+    position: absolute;
+    transform: translateX(-100%);
+    padding:var(--margin-s);
+    min-width: 280px;
+    margin-left: 35px;
+    margin-top: 2px;
+}
+
+.accessibility-menu div button {
+    display: block;
+    margin-top:10px;
+}

@@ -1,2 +1,73 @@
-(()=>{var u=document.querySelectorAll("input[required]");u.forEach(t=>{let r=t.getAttribute("id"),n=document.querySelector(`label[for="${r}"`),i='<span class="required">&nbsp;(Required)</span>';n.insertAdjacentHTML("beforeend",i)});var b=document.querySelectorAll('input[aria-invalid="true"]');b.forEach(t=>{let r=t.getAttribute("id"),n=r+"-error",i=r+"-info";document.querySelector(`div[id="${n}"]`).removeAttribute("hidden");let o=t.getAttribute("aria-describedby");t.setAttribute("aria-describedby",o+" "+n)});var g=document.querySelectorAll('.collapse [data-trigger="true"]');g.forEach(t=>{let r=t.tagName,n=t.dataset,i="";Object.keys(n).map(e=>{e!=="trigger"&&(i+=` data-${e} `)}),t.innerHTML=`
-    <button aria-expanded="false" ${i}>${t.textContent} &#43; </button>`;let o=(e=>{let s=[];for(;e.nextElementSibling&&e.nextElementSibling.tagName!==r;)s.push(e.nextElementSibling),e=e.nextElementSibling;return s.forEach(c=>{c.parentNode.removeChild(c)}),s})(t),a=document.createElement("div");a.hidden=!0,a.setAttribute("class","flow"),o.forEach(e=>{a.appendChild(e)}),t.parentNode.insertBefore(a,t.nextElementSibling);let d=t.querySelector("button");d.onclick=()=>{let e=d.getAttribute("aria-expanded")==="true";d.setAttribute("aria-expanded",!e),a.hidden=e}});})();
+(() => {
+  // src/js/index.js
+  var allRequired = document.querySelectorAll("input[required]");
+  allRequired.forEach((el) => {
+    const id = el.getAttribute("id");
+    const label = document.querySelector(`label[for="${id}"`);
+    const text = `<span class="required">&nbsp;(Required)</span>`;
+    label.insertAdjacentHTML("beforeend", text);
+  });
+  var allAriaInvalid = document.querySelectorAll(`input[aria-invalid="true"]`);
+  allAriaInvalid.forEach((el) => {
+    const id = el.getAttribute("id");
+    const errorId = id + "-error";
+    const infoID = id + "-info";
+    const errorMessage = document.querySelector(`div[id="${errorId}"]`);
+    errorMessage.removeAttribute("hidden");
+    const existingIds = el.getAttribute("aria-describedby");
+    el.setAttribute("aria-describedby", existingIds + " " + errorId);
+  });
+  var triggers = document.querySelectorAll('.collapse [data-trigger="true"]');
+  triggers.forEach((el) => {
+    const tagName = el.tagName;
+    const dataAttributes = el.dataset;
+    let attrString = "";
+    Object.keys(dataAttributes).map((key) => {
+      if (key !== "trigger") {
+        attrString += ` data-${key} `;
+      }
+    });
+    el.innerHTML = `
+    <button aria-expanded="false" ${attrString}>${el.textContent}</button>`;
+    const getContent = (elem) => {
+      let elems = [];
+      while (elem.nextElementSibling && elem.nextElementSibling.tagName !== tagName) {
+        elems.push(elem.nextElementSibling);
+        elem = elem.nextElementSibling;
+      }
+      elems.forEach((node) => {
+        node.parentNode.removeChild(node);
+      });
+      return elems;
+    };
+    let contents = getContent(el);
+    let wrapper = document.createElement("div");
+    wrapper.hidden = true;
+    wrapper.setAttribute("class", "flow accessibility-menu");
+    contents.forEach((node) => {
+      wrapper.appendChild(node);
+    });
+    el.parentNode.insertBefore(wrapper, el.nextElementSibling);
+    let btn = el.querySelector("button");
+    btn.onclick = () => {
+      let expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", !expanded);
+      wrapper.hidden = expanded;
+    };
+  });
+  function setThemeFromLocalStorage() {
+    const value = localStorage.getItem("theme");
+    if (value == "light") {
+      document.documentElement.setAttribute("theme", "light");
+      localStorage.setItem("theme", "light");
+    }
+    if (value == "dark") {
+      document.documentElement.setAttribute("theme", "dark");
+      localStorage.setItem("theme", "dark");
+    }
+  }
+  (function() {
+    setThemeFromLocalStorage();
+  })();
+})();
+//# sourceMappingURL=index.js.map
