@@ -108,6 +108,15 @@ function setThemeFromLocalStorage() {
         localStorage.setItem("theme", "dark");
     }
 
+    const size = localStorage.getItem("fontsize");
+    let root = document.querySelector("html"),
+        style = window.getComputedStyle(root, null).getPropertyValue('font-size'),
+        fontSize = parseFloat(style);
+    root.style.fontSize = size;
+
+    const font = localStorage.getItem("fontstyle");
+    const html = document.querySelector('html');
+    html.setAttribute('font-style', font);
 }
 
 function changeColors(el) {

@@ -1,10 +1,10 @@
 article > *+* {
     margin-top: var(--margin-s);
-    position: relative;
 }
 
 article h1 + figure, 
 article h1 + picture {
+    z-index: -1;
     position: absolute;
     margin:0;
     max-width: 40%;
@@ -14,12 +14,16 @@ article h1 + picture {
 
 article h1 + picture img {
     border:none!important;
+    box-shadow: unset;
+    filter: drop-shadow(
+    1px 2px 4px var(--text)
+  );
 }
 
 @media screen and (max-width: 1100px) {
     article h1 + picture,
     article h1 + figure {
-        position: static;
+        position: relative;
         margin:inherit;
         max-width: 60ch;
         right:unset;

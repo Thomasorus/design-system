@@ -12,7 +12,7 @@
     --title-line-height-3: clamp(2.00rem, 1.72rem + 1.38vw, 2.96rem);
     --title-line-height-2: clamp(2.40rem, 2.02rem + 1.86vw, 3.70rem);
     --title-line-height-1: clamp(2.88rem, 2.38rem + 2.50vw, 4.63rem);
-  
+
     /* TITLES MARGINS VARS */
     /* Minimum size for H1 is 70, maximum is 100 */
     /* Multiply the max by the scale of 0.25 to get subsequent sizes : 100 > 0.75. > 0.5 > 0.25 > 0.125 > 0.0625 */
@@ -26,51 +26,63 @@
 
 h6 {
     font-size: var(--title-scale-6);
-    line-height:var(--title-line-height-6);
-    margin:var(--title-margin-6) 0!important;
+    line-height: var(--title-line-height-6);
+    margin: var(--title-margin-6) 0 !important;
     max-width: 30ch;
-}
-h5 {
-    font-size: var(--title-scale-5);
-    line-height:var(--title-line-height-5);
-    margin:var(--title-margin-5) 0!important;
-    max-width: 30ch;
-}
-h4 {
-    font-size: var(--title-scale-4);
-    line-height:var(--title-line-height-4);
-    margin:var(--title-margin-4) 0!important;
-    max-width: 30ch;
-}
-h3 {
-    font-size: var(--title-scale-3);
-    line-height:var(--title-line-height-3);
-    margin:var(--title-margin-3) 0!important;
-    max-width: 30ch;
-}
-h2 {
-    font-size: var(--title-scale-2);
-    line-height:var(--title-line-height-2);
-    margin:var(--title-margin-2) 0!important;
-    max-width: 30ch;
-}
-h1 {
-    font-size: var(--title-scale-1);
-    line-height:var(--title-line-height-1);
-    margin:var(--title-margin-1) 0!important;
 }
 
-h1, h2, h3, h4, h5, h6{
+h5 {
+    font-size: var(--title-scale-5);
+    line-height: var(--title-line-height-5);
+    margin: var(--title-margin-5) 0 !important;
+    max-width: 30ch;
+}
+
+h4 {
+    font-size: var(--title-scale-4);
+    line-height: var(--title-line-height-4);
+    margin: var(--title-margin-4) 0 !important;
+    max-width: 30ch;
+}
+
+h3 {
+    font-size: var(--title-scale-3);
+    line-height: var(--title-line-height-3);
+    margin: var(--title-margin-3) 0 !important;
+    max-width: 30ch;
+}
+
+h2 {
+    font-size: var(--title-scale-2);
+    line-height: var(--title-line-height-2);
+    margin: var(--title-margin-2) 0 !important;
+    max-width: 30ch;
+}
+
+h1 {
+    font-size: var(--title-scale-1);
+    line-height: var(--title-line-height-1);
+    margin: var(--title-margin-1) 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
     font-family: "Editorial New Regular", serif;
     font-weight: 400;
 }
 
-h1:hover a, 
-h2:hover a, 
-h3:hover a, 
-h4:hover a, 
-h5:hover a, 
+
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a,
 h6:hover a {
-    color:initial;
-    background-color: initial;
+    z-index: 0 !important;
+    background: transparent;
 }

@@ -6,6 +6,7 @@
     min-width: 280px;
     margin-left: 35px;
     margin-top: 2px;
+    border:2px solid var(--text);
 }
 
 .accessibility-menu div button {
