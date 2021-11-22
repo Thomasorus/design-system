@@ -129,11 +129,11 @@ html[font-style="atkinson"] * { font-family: 'Atkinson Regular', sans-serif; }
 
 /* Open Dyslexic */
 
-html[font-style="dislexia"] b, html[font-style="dislexia"] strong{
+html[font-style="dislexia"] b, html[font-style="dislexia"] strong, html[font-style="dislexia"] dt{
   font-family: 'OpenDyslexic Bold';
 }
 
-html[font-style="dislexia"] i, html[dislexia] em {
+html[font-style="dislexia"] i, html[dislexia] em, html[dislexia] dt {
   font-family: 'OpenDyslexic Italic';
 }
 
@@ -144,7 +144,7 @@ html[font-style="dislexia"] code {
 
 /* Atkinson */
 
-html[font-style="atkinson"] b, html[font-style="atkinson"] strong{
+html[font-style="atkinson"] b, html[font-style="atkinson"] strong, html[font-style="atkinson"] dt{
   font-family: 'Atkinson Bold';
 }
 

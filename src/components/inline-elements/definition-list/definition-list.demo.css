@@ -1,0 +1,17 @@
+dl {
+    background-color: var(--background-dark);
+    border-left: 5px solid var(--border);
+    padding: var(--margin-s);
+}
+
+dt {
+    font-weight: bold;
+}
+
+dl>dt {
+    margin-top: var(--base-font-size);
+}
+
+dd {
+    padding-left: var(--margin-s);
+}
