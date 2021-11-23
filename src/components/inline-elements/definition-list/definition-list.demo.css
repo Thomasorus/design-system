@@ -11,3 +11,7 @@ dt {
 dd {
     padding-left: var(--margin-s);
 }
+
+dl > dt + dd {
+    margin-bottom: calc(var(--margin-s) / 2);
+}
