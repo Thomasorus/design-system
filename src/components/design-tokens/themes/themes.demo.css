@@ -63,7 +63,7 @@
     --background-dark: var(--pink-dark);
     --border: var(--pink-darker);
 }
-[theme="color"] .home {
+[theme="color"] .home, [theme="color"] .stubs, [theme="color"] .sitemap {
     --text: var(--black);
     --background: var(--grey);
     --accent:  var(--white);
@@ -73,7 +73,7 @@
 
 
 
-.portfolio, .projects, .journal, .knowledge, .about, .home {
+.portfolio, .projects, .journal, .knowledge, .about, .home, .stubs, .sitemap {
     background-color: var(--background);
     color: var(--text);
     

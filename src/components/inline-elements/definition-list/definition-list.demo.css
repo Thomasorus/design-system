@@ -8,10 +8,6 @@ dt {
     font-weight: bold;
 }
 
-dl>dt {
-    margin-top: var(--base-font-size);
-}
-
 dd {
     padding-left: var(--margin-s);
 }
