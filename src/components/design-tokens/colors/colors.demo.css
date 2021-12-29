@@ -16,7 +16,7 @@
 
     --teal: hsla(147, 75%, 68%, 1);
     --teal-dark: hsla(147, 49%, 58%, 1);
-    --teal-darker: hsl(146,38%,45%, 1);
+    --teal-darker: hsla(146,38%,45%, 1);
 
     --pink: hsla(340, 100%, 84%, 1);
     --pink-dark: hsla(340, 100%, 76%, 1);
@@ -25,7 +25,7 @@
     --red: hsla(14, 88%, 62%, 1);
     --red-dark: hsla(14, 71%, 54%, 1);
     --red-darker: hsla(14, 83%, 43%, 1);
-    
+
     --blue:hsla(238, 98%, 78%, 1);
     --blue-dark: hsla(238, 79%, 70%, 1);
     --blue-darker: hsla(237, 63%, 60%, 1);
