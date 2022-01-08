@@ -1,15 +1,29 @@
 .accessibility-menu {
     background-color: var(--background);
     position: absolute;
-    transform: translateX(-100%);
+    transform: translateX(-50%);
     padding:var(--margin-s);
     min-width: 280px;
-    margin-left: 35px;
     margin-top: 2px;
     border:2px solid var(--text);
+    z-index: 1;
+}
+
+.accessibility-menu__sub {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.accessibility-menu__sub > * {
+    margin-right: 10px;
 }
 
 .accessibility-menu div button {
     display: block;
     margin-top:10px;
+}
+
+
+[no-anim="true"] * {
+    animation: none!important;
 }

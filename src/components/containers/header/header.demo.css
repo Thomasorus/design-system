@@ -3,6 +3,7 @@ header {
     background:var(--background);
     padding: var(--margin-l);
     display:flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start;
     gap:var(--margin-s);
