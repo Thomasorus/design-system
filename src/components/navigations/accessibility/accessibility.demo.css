@@ -24,6 +24,6 @@
 }
 
 
-[no-anim="true"] * {
+[anim="false"] * {
     animation: none!important;
 }

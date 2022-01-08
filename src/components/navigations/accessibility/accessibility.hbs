@@ -30,8 +30,8 @@
     <div>
         <p>Animations:</p>
         <div class="accessibility-menu__sub">
-            <button data-small="true" data-secondary="true"  aria-label="Enable animations" onclick="changeAnimations(this)" data-resize="+">Enable</button>
-            <button data-small="true" data-secondary="true"  aria-label="Disable animations" onclick="changeAnimations(this)" data-resize="-">Disable</button>
+            <button data-small="true" data-secondary="true" data-anim="true" aria-label="Enable animations" onclick="changeAnimations(this)" >Enable</button>
+            <button data-small="true" data-secondary="true" data-anim="false"  aria-label="Disable animations" onclick="changeAnimations(this)" >Disable</button>
         </div>
     </div>
     <div>
@@ -45,9 +45,9 @@
     <div>
         <p>Change Font:</p>
         <div class="accessibility-menu__sub">
-            <button data-small="true" data-secondary="true"  aria-label="Use Editorial New + Inter" onclick="changeFont(this)"  data-font="inter">Editorial New + Inter</button>
-            <button data-small="true" data-secondary="true"  aria-label="Classic font sizes" onclick="changeFont(this)" data-font="dislexia">Open Dyslexic</button>
-            <button data-small="true" data-secondary="true"  aria-label="Classic font sizes" onclick="changeFont(this)" data-font="atkinson">Atkinson Hyper Legible</button>
+            <button data-small="true" data-secondary="true" aria-label="Use Editorial New + Inter" onclick="changeFont(this)"  data-font="inter">Editorial New + Inter</button>
+            <button data-small="true" data-secondary="true" aria-label="Classic font sizes" onclick="changeFont(this)" data-font="dislexia">Open Dyslexic</button>
+            <button data-small="true" data-secondary="true" aria-label="Classic font sizes" onclick="changeFont(this)" data-font="atkinson">Atkinson Hyper Legible</button>
         </div>
     </div>
 </li>
@@ -60,21 +60,26 @@ function changeFont(el) {
     let html = document.querySelector("html")
     if (font === "inter") {
         html.setAttribute('font-style', "")
+        localStorage.setItem("sorus-style", null);
     } else {
         html.setAttribute('font-style', font)
+        localStorage.setItem("sorus-style", font);
     }
 }
 
 function changeFontSize(el) {
     const action = el.dataset.resize;
-    console.log(action)
     let root = document.querySelector("html"),
         style = window.getComputedStyle(root, null).getPropertyValue('font-size'),
         fontSize = parseFloat(style);
     if (action === "+") {
-        root.style.fontSize = (fontSize * 1.25) + "px";
+        let size = (fontSize * 1.25) + "px";
+        root.style.fontSize = size
+        localStorage.setItem("sorus-size", size);
     } else {
-        root.style.fontSize = (fontSize / 1.25) + "px";
+        let size = (fontSize / 1.25) + "px";
+        root.style.fontSize = size
+        localStorage.setItem("sorus-size", size);
     }
 }
 
@@ -83,37 +88,38 @@ function changeColors(el) {
     const currentTheme = html.getAttribute('theme')
     const newTheme = el.getAttribute("id")
     html.setAttribute("theme", newTheme)
-    localStorage.setItem("theme", newTheme);
+    localStorage.setItem("sorus-theme", newTheme);
 }
 
 function changeAnimations(el) {
-    const html = document.querySelector("html")
-    const currentAnim = html.getAttribute('no-anim')
-    console.log(currentAnim )
-    if(!currentAnim) {
-        html.setAttribute("no-anim", true)
-        localStorage.setItem("anim", "false");
-    } else {
-        html.removeAttribute('no-anim')
-        localStorage.setItem("anim", "true");
-    }
+    const anim = el.dataset.anim;
+    let html = document.querySelector("html")
+    html.setAttribute('anim', anim)
+    localStorage.setItem("sorus-anim", anim);
 }
 
-
 function setThemeFromLocalStorage() {
-    const value = localStorage.getItem("theme");
-    if (value == "light") {
-        document.documentElement.setAttribute('theme', 'light');
-        localStorage.setItem("theme", "light");
-    }
-    if (value == "dark") {
-        document.documentElement.setAttribute('theme', 'dark');
-        localStorage.setItem("theme", "dark");
-    }
+    const html = document.querySelector("html")
+
+    const theme = localStorage.getItem("sorus-theme");
+    theme ? html.setAttribute('theme', theme) : ''
+
+    const anim = localStorage.getItem("sorus-anim");
+    anim ? html.setAttribute('anim', anim) : ''
+
+    const size = localStorage.getItem("sorus-size");
+    size ? html.style.fontSize = size : ''
+
+    const style = localStorage.getItem("sorus-style");
+    style ? html.setAttribute('font-style', style) : ''
 }
 
 (function () {
-    setThemeFromLocalStorage()
+    document.addEventListener("DOMContentLoaded", function() {
+        setThemeFromLocalStorage()
+});
+
+
 })();
 </script>
 

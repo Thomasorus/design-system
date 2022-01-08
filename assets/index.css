@@ -2095,7 +2095,7 @@ nav[role="breadcrumb"] {
     display: block;
     margin-top:10px;
 } 
-[no-anim="true"] * {
+[anim="false"] * {
     -webkit-animation: none!important;
             animation: none!important;
 } 
