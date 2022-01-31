@@ -3,7 +3,8 @@
     --figcaption-spacing: calc(((11 / 16) * 1rem) + (16 - 11) * var(--fluid-bp));
 }
 
-figure > picture + figcaption {
+figure > picture + figcaption,
+figure > video + figcaption {
     background-color: black;
     background-color: var(--background-dark);
     padding: 11px;
@@ -14,11 +15,20 @@ figure > picture + figcaption {
     box-shadow: var(--background-dark) 0 0 0 2px;
 }
 
-picture img {
+picture img,
+picture video {
     display: block;
     box-shadow: var(--background-dark) 0 0 0 2px;
 }
 
-figure img {
+figure img,
+figure video {
+    max-width: 100%;
     border-bottom: none;
+}
+
+figure video {
+    width: 100%;
+    box-shadow: var(--background-dark) 0 0 0 2px;
+    display: block;
 }
