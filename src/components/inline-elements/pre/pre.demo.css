@@ -7,11 +7,14 @@
 }
 
 pre {
+    background-color: lightgrey;
     background-color:var(--background-dark);
+    color: black;
     color: var(--text);
     overflow-x: auto;
     border-radius: var(--radius-sm);
     scrollbar-color: var(--accent) var(--background-dark);
+    padding: 27px 15px 54px 15px;
     padding: var(--spacing-pre-y) var(--spacing-pre-x);
     margin:0;
     line-height: 1;

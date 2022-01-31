@@ -13,13 +13,19 @@
 input {
     display: block;
     color: var(--text);
-    background-color: var(--grey);
     border: none;
     border-radius: var(--radius-sm);
     min-height: 42px;
+    padding: 3px 9px;
     padding: var(--padding-input-y) var(--padding-input-x);
-    outline: transparent;
     width:1ch;
+    background: lightgrey;
+    outline: transparent;
+
+}
+
+[theme="color"] input {
+    background-color: var(--accent);
 }
 
 [theme="dark"] input {
@@ -37,6 +43,14 @@ input:focus {
     box-shadow: var(--border) 0 0 0 2px;
 }
 
+[theme="light"] input:focus {
+    box-shadow: var(--text) 0 0 0 2px;
+}
+
+[theme="dark"] input:focus {
+    box-shadow: var(--text) 0 0 0 2px;
+}
+
 
 /* Error styles */
 
@@ -46,6 +60,7 @@ input[aria-invalid="true"] {
 
 [theme="dark"] input[aria-invalid="true"] {
     background-color: var(--grey-dark);
+    color:  var(--background);
 }
 
 [theme="light"] input[aria-invalid="true"]:focus {
@@ -53,7 +68,7 @@ input[aria-invalid="true"] {
 }
 
 [theme="dark"] input[aria-invalid="true"]:focus {
-    box-shadow: var(--accent) 0 0 0 2px;
+    box-shadow: var(--text) 0 0 0 2px;
 }
 
 [theme="color"] input[aria-invalid="true"]:focus {

@@ -1,3 +1,7 @@
+[hidden].accessibility-menu {
+    display: none;
+}
+
 .accessibility-menu {
     background-color: var(--background);
     position: absolute;

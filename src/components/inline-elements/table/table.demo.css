@@ -1,7 +1,9 @@
 table {
     width:100%;
     text-align: left;
+    padding: 25px;
     padding: var(--margin-s);
+    border: 2px solid black;
     border: 2px solid var(--text);
 }
 
@@ -12,5 +14,7 @@ table caption {
 }
 
 tbody > *, thead > *  {
+    border: 2px solid black;
+    border-collapse: collapse;
     box-shadow: 0 2px 0 var(--text);
 }

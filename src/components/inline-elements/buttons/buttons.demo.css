@@ -3,12 +3,14 @@ button {
     min-width: 120px;
     max-width: 20ch;
     box-shadow:var(--text) 0 0 0 2px;
+    background-color: black;
     background-color: var(--text);
     border:none;
     border-radius: var(--radius-sm);
     line-height: 1.5;
     font-weight: 700;
     padding:5px 19px;
+    color: white;
     color:var(--accent);
     transition: 0.25s;
 }

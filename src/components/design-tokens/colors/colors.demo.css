@@ -1,32 +1,32 @@
 
 :root {
-    --black: hsla(0, 0%, 7%, 1);
-    --white: hsla(0, 0%, 100%, 1);
+    --black: #000000;
+    --white: #ffffff;
 
-    --grey: hsla(0, 0%, 93%, 1); /* EEE */
-    --grey-dark: hsla(0, 0%, 67%, 1); /* AAA */
-    --grey-darker: hsla(0, 0%, 33%, 1); /* 555 */
-    --grey-pitchblack: hsla(0, 0%, 13%, 1); /* 222 */
+    --grey: #eeeeee;
+    --grey-dark: #aaaaaa;
+    --grey-darker: #555555;
+    --grey-pitchblack: #222222;
 
-    --focus: hsla(0, 0%, 40%, 1);
+    --focus: #666666;
 
-    --yellow: hsla(50, 88%, 58%, 1);
-    --yellow-dark: hsla(50, 73%, 53%, 1);
-    --yellow-darker: hsl(50,66%,36%, 1);
+    --yellow: #f2d336;
+    --yellow-dark: #dfc130;
+    --yellow-darker: #98841f;
 
-    --teal: hsla(147, 75%, 68%, 1);
-    --teal-dark: hsla(147, 49%, 58%, 1);
-    --teal-darker: hsla(146,38%,45%, 1);
+    --teal: #70eba7;
+    --teal-dark: #5fc88f;
+    --teal-darker: #479e6d;
 
-    --pink: hsla(340, 100%, 84%, 1);
-    --pink-dark: hsla(340, 100%, 76%, 1);
-    --pink-darker: hsla(340, 71%, 49%, 1);
+    --pink: #ffadc9;
+    --pink-dark: #ff85ad;
+    --pink-darker: #d6245f;
 
-    --red: hsla(14, 88%, 62%, 1);
-    --red-dark: hsla(14, 71%, 54%, 1);
-    --red-darker: hsla(14, 83%, 43%, 1);
+    --red: #f37149;
+    --red-dark: #dd5d36;
+    --red-darker: #c93d13;
 
-    --blue:hsla(238, 98%, 78%, 1);
-    --blue-dark: hsla(238, 79%, 70%, 1);
-    --blue-darker: hsla(237, 63%, 60%, 1);
+    --blue:#9094fe;
+    --blue-dark: #767aef;
+    --blue-darker: #595fd9;
 }

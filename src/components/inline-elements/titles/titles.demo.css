@@ -25,43 +25,61 @@
 }
 
 h6 {
+    font-size: 0.9rem;
     font-size: var(--title-scale-6);
+    line-height: 1.16rem;
     line-height: var(--title-line-height-6);
+    margin: 4.37px 0!important;
     margin: var(--title-margin-6) 0 !important;
     max-width: 30ch;
 }
 
 h5 {
+    font-size: 1.09rem;
     font-size: var(--title-scale-5);
+    line-height: 1.39rem;
     line-height: var(--title-line-height-5);
+    margin: 8.75px 0!important;
     margin: var(--title-margin-5) 0 !important;
     max-width: 30ch;
 }
 
 h4 {
+    font-size: 1.30rem;
     font-size: var(--title-scale-4);
+    line-height: 1.66rem;
     line-height: var(--title-line-height-4);
+    margin: 17.5px 0!important;
     margin: var(--title-margin-4) 0 !important;
     max-width: 30ch;
 }
 
 h3 {
+    font-size: 1.56rem;
     font-size: var(--title-scale-3);
+    line-height: 2.00rem;
     line-height: var(--title-line-height-3);
+    margin: 25px 0!important;
     margin: var(--title-margin-3) 0 !important;
     max-width: 30ch;
 }
 
 h2 {
+    font-size: 1.88rem;
     font-size: var(--title-scale-2);
+    line-height: 2.40rem;
     line-height: var(--title-line-height-2);
+    margin: 52.5px 0!important;
     margin: var(--title-margin-2) 0 !important;
     max-width: 30ch;
 }
 
 h1 {
+    font-size: 2.25rem;
     font-size: var(--title-scale-1);
+    line-height: 2.88rem;
     line-height: var(--title-line-height-1);
+    margin: 70px 0!important;
     margin: var(--title-margin-1) 0 !important;
 }
 

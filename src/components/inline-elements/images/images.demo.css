@@ -4,19 +4,19 @@
 }
 
 figure > picture + figcaption {
+    background-color: black;
     background-color: var(--background-dark);
+    padding: 11px;
     padding: var(--figcaption-spacing);
     min-width:100%;
     border-bottom-left-radius: var(--radius-sm);
     border-bottom-right-radius: var(--radius-sm);
     box-shadow: var(--background-dark) 0 0 0 2px;
-
 }
 
 picture img {
     display: block;
     box-shadow: var(--background-dark) 0 0 0 2px;
-
 }
 
 figure img {

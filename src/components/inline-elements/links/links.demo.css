@@ -1,4 +1,5 @@
 a {
+    color: black;
     color:var(--text);
     padding:5px 10px;
     margin:-5px -10px;
@@ -17,7 +18,9 @@ article a {
 a:hover,
 a[target="_blank"]:hover,
 a[target="_blank"]:hover:after  {
+    color: white;
     color:var(--background);
+    background: black;
     background:var(--text);
     transition: 0.25s;
 }

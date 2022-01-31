@@ -1,4 +1,5 @@
 label {
+    color: var(--text);
     font-size: var(--base-font-size);
     font-weight: 700;
     display: block;
@@ -12,5 +13,4 @@ label .required {
 
 label[data-fake] {
     font-weight: 400;
-
 }
