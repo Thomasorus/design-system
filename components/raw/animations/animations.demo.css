@@ -1,0 +1,63 @@
+@media (prefers-reduced-motion: no-preference) {
+
+  .glitch-text {
+    position: relative;
+    overflow: hidden;
+  }
+  .glitch-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -2px;
+    background: var(--background);
+    overflow: hidden;
+    animation: glitch-2 5s infinite linear;
+  }
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    top: 0;
+    background: var(--background);
+    overflow: hidden;
+    animation: glitch 5s infinite linear;
+  }
+}
+
+@keyframes glitch {
+  0%, 89% {
+    clip-path: inset(0 0 0 0);
+  }
+  90% {
+    clip-path: inset(2% 0 10% 0);
+  }
+  91% {
+    clip-path: inset(21% 0 15% 0);
+  }
+  92% {
+    clip-path: inset(44% 0 54% 0);
+  }
+  93% {
+    clip-path: inset(70% 0 14% 0);
+  }
+  94%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 90% {
+    clip-path: inset(0 0 0 0);
+  }
+  91% {
+    clip-path: inset(63% 0 6% 0);
+  }
+  92% {
+    clip-path: inset(23% 0 20% 0);
+  }
+  93% {
+    clip-path: inset(36% 0 48% 0);
+  }
+  94%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
