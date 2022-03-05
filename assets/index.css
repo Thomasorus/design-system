@@ -40,8 +40,7 @@ a:not([class]) {
           text-decoration-skip-ink: auto;
 } 
 /* Make images easier to work with */ 
-img,
-picture {
+img {
   max-width: 100%;
   display: block;
 } 
@@ -1624,11 +1623,15 @@ figure > video + figcaption {
     border-bottom-right-radius: var(--radius-sm);
     box-shadow: var(--background-dark) 0 0 0 2px;
 } 
+picture {
+    display: block;
+} 
 picture img,
 picture video {
     display: block;
     box-shadow: var(--background-dark) 0 0 0 2px;
 } 
+picture img,
 figure img,
 figure video {
     max-width: 100%;
@@ -2023,10 +2026,6 @@ article h1 + picture img {
     -o-object-fit: cover;
        object-fit: cover;
 } 
-/* article img, 
-article picture {
-    max-width: 100%;
-} */ 
 @media screen and (max-width: 1300px) {
     article h1 + picture,
     article h1 + figure {

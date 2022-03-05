@@ -24,11 +24,6 @@ article h1 + picture img {
     object-fit: cover;
 }
 
-/* article img, 
-article picture {
-    max-width: 100%;
-} */
-
 @media screen and (max-width: 1300px) {
     article h1 + picture,
     article h1 + figure {
